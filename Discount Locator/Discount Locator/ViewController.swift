@@ -13,8 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        //DbController.sharedDBInstance.addDiscount(remoteId: 1, name: "povoljnio sir", store: store)
+        
     }
 
     override func didReceiveMemoryWarning() {

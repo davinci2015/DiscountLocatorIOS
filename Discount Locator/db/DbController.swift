@@ -26,14 +26,30 @@ public class DbController
         store.longitude = longitude
         store.latitude = latitude
         
-        try! self.realm.write
-        {
-            self.realm.add(store)
-        }
+        realmAdd(store)
     }
     
-    public func addDiscount()
+    public func addDiscount(remoteId: Int, name: String)
     {
+        let discount = Discount()
+        discount.remoteId = remoteId
+        discount.name = name
         
+        realmAdd(discount)
+    }
+    
+    public func bindStoresToDiscount()
+    {
+        /*
+        *       TO DO: BIND SOTRES TO DISCOUNTS
+        */
+    }
+    
+    func realmAdd(o: Object)
+    {
+        try! self.realm.write
+            {
+                self.realm.add(o)
+        }
     }
 }

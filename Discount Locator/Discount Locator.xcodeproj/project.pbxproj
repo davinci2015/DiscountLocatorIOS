@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0830661D29972D1CFF4D0834 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7224A4B8A04152448DCDB063 /* Pods.framework */; };
+		52AC20621BEBEAD900067634 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC20611BEBEAD900067634 /* Article.swift */; };
+		52AC20681BEC008E00067634 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC20671BEC008E00067634 /* Categories.swift */; };
+		52AC206A1BEC019C00067634 /* StoreCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC20691BEC019C00067634 /* StoreCategories.swift */; };
+		52AC206C1BEC026000067634 /* DiscountArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC206B1BEC026000067634 /* DiscountArticles.swift */; };
 		52EB36101BEA704100A05FD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB360F1BEA704100A05FD8 /* AppDelegate.swift */; };
 		52EB36121BEA704100A05FD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB36111BEA704100A05FD8 /* ViewController.swift */; };
 		52EB36151BEA704100A05FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EB36131BEA704100A05FD8 /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		513242E1C4BA71C3AE0B12C7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		52AC20611BEBEAD900067634 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		52AC20671BEC008E00067634 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		52AC20691BEC019C00067634 /* StoreCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCategories.swift; sourceTree = "<group>"; };
+		52AC206B1BEC026000067634 /* DiscountArticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountArticles.swift; sourceTree = "<group>"; };
 		52EB360C1BEA704100A05FD8 /* Discount Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Discount Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EB360F1BEA704100A05FD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52EB36111BEA704100A05FD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +133,10 @@
 				52EB36331BEA8D9400A05FD8 /* Store.swift */,
 				52EB36351BEA8EE300A05FD8 /* DbController.swift */,
 				52EB36371BEA9B2C00A05FD8 /* Discount.swift */,
+				52AC20611BEBEAD900067634 /* Article.swift */,
+				52AC20671BEC008E00067634 /* Categories.swift */,
+				52AC20691BEC019C00067634 /* StoreCategories.swift */,
+				52AC206B1BEC026000067634 /* DiscountArticles.swift */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -319,8 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AC20621BEBEAD900067634 /* Article.swift in Sources */,
 				52EB36341BEA8D9400A05FD8 /* Store.swift in Sources */,
+				52AC20681BEC008E00067634 /* Categories.swift in Sources */,
+				52AC206A1BEC019C00067634 /* StoreCategories.swift in Sources */,
 				52EB36361BEA8EE300A05FD8 /* DbController.swift in Sources */,
+				52AC206C1BEC026000067634 /* DiscountArticles.swift in Sources */,
 				52EB36381BEA9B2C00A05FD8 /* Discount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +549,7 @@
 				52EB36301BEA8CFF00A05FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,4 +20,9 @@ class Store: Object
     
     dynamic var longitude: Int = 0
     dynamic var latitude: Int = 0
+    
+    var discounts: [Discount]
+    {
+        return linkingObjects(Discount.self, forProperty: "store")
+    }
 }
