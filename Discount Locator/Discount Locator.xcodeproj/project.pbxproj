@@ -25,6 +25,7 @@
 		52E0A8F61BF286F4008A8A4F /* ws.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E0A8F51BF286F4008A8A4F /* ws.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52E0A8FA1BF286F4008A8A4F /* ws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0A8F31BF286F4008A8A4F /* ws.framework */; };
 		52E0A8FB1BF286F4008A8A4F /* ws.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0A8F31BF286F4008A8A4F /* ws.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52E0A9001BF289A7008A8A4F /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E0A8FF1BF289A7008A8A4F /* HTTPRequest.swift */; };
 		AD2D6ACBF2EE9CF38F0C2DBA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B49BC96E103AED423A25955 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		52E0A8F31BF286F4008A8A4F /* ws.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ws.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E0A8F51BF286F4008A8A4F /* ws.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ws.h; sourceTree = "<group>"; };
 		52E0A8F71BF286F4008A8A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E0A8FF1BF289A7008A8A4F /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		6B49BC96E103AED423A25955 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804F51C96AAC8963F034DD40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D85B9AC2342FC4FB7F909B08 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				52E0A8F51BF286F4008A8A4F /* ws.h */,
 				52E0A8F71BF286F4008A8A4F /* Info.plist */,
+				52E0A8FF1BF289A7008A8A4F /* HTTPRequest.swift */,
 			);
 			path = ws;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E0A9001BF289A7008A8A4F /* HTTPRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +611,7 @@
 		52E0A8FC1BF286F4008A8A4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -618,6 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = air.hr.foi.ws;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -626,6 +632,7 @@
 		52E0A8FD1BF286F4008A8A4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
