@@ -14,10 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var ovojeJASON = HTTPRequest.sharedWSInstance.httprequest("http://cortex.foi.hr/mtl/courses/air/", serviceName: "discounts", params: ["method":"getAll"])
-        
-        print(ovojeJASON)
-        
+            
     }
 
     override func didReceiveMemoryWarning() {

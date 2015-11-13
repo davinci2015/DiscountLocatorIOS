@@ -38,13 +38,6 @@ public class DbController
         realmAdd(discount)
     }
     
-    public func bindStoresToDiscount()
-    {
-        /*
-        *       TO DO: BIND SOTRES TO DISCOUNTS
-        */
-    }
-    
     func realmAdd(o: Object)
     {
         try! self.realm.write
