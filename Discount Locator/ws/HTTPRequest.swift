@@ -6,19 +6,20 @@
 //  Copyright © 2015 air. All rights reserved.
 //
 import Alamofire
+import SwiftyJSON
+
 public class HTTPRequest
 {
     public static var sharedWSInstance = HTTPRequest()
     
-    public func httprequest(url: String, serviceName: String, params: [String : String], completion: (result: AnyObject) -> Void)
+    public func httprequest(url: String, completion: (result: AnyObject) -> Void)
     {
-        let serviceUrl: String = serviceName + ".php"
-        Alamofire.request(.POST, "http://cortex.foi.hr/mtl/courses/air/\(serviceUrl)", parameters: params)
+        Alamofire.request(.POST, url)
             .responseJSON { response in
-                print(response.result)   // result of response serialization
+                if let json = response.result.value{
                 
-                if let JSON = response.result.value {
-                    completion(result: JSON)
+                    completion(result: json)
+                
                 }
         }
     }

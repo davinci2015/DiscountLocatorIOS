@@ -8,13 +8,16 @@
 
 import UIKit
 import db
-import ws
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-            
+        var k:WebServiceDataLoader = WebServiceDataLoader()
+        k.LoadData()
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

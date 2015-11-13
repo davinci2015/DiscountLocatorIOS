@@ -14,35 +14,35 @@ public class DbController
 {
     public static var sharedDBInstance = DbController()
     
-    private let realm = try! Realm()
-    
-    public func addStore(remoteId: Int, name: String, desc: String, imgUrl: String, longitude: Int, latitude: Int)
-    {
-        let store = Store()
-        store.remoteId = remoteId
-        store.name = name
-        store.desc = desc
-        store.imgUrl = imgUrl
-        store.longitude = longitude
-        store.latitude = latitude
+    public let realm = try! Realm()
         
-        realmAdd(store)
-    }
+//    public func addStore(remoteId: Int, name: String, desc: String, imgUrl: String, longitude: Int, latitude: Int)
+//    {
+//        let store = Store()
+//        store.remoteId = remoteId
+//        store.name = name
+//        store.desc = desc
+//        store.imgUrl = imgUrl
+//        store.longitude = longitude
+//        store.latitude = latitude
+//        
+//        realmAdd(store)
+//    }
     
-    public func addDiscount(remoteId: Int, name: String)
-    {
-        let discount = Discount()
-        discount.remoteId = remoteId
-        discount.name = name
-        
-        realmAdd(discount)
-    }
+//    public func addDiscount(remoteId: Int, name: String)
+//    {
+//        let discount = Discount()
+//        discount.remoteId = remoteId
+//        discount.name = name
+//        
+//        realmAdd(discount)
+//    }
     
-    func realmAdd(o: Object)
+    public func realmAdd(o: Object)
     {
         try! self.realm.write
-            {
-                self.realm.add(o)
+        {
+            self.realm.add(o)
         }
     }
 }
