@@ -8,15 +8,17 @@
 
 import UIKit
 import db
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
+    
+    @IBOutlet weak var storesTableView: UITableView!
+    
+    var webServiceDataLoader = WebServiceDataLoader()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var k:WebServiceDataLoader = WebServiceDataLoader()
-        k.LoadData()
-        
-        
-        
+
+        webServiceDataLoader.storesTableView = self.storesTableView
+        webServiceDataLoader.LoadData()
         
     }
 
@@ -25,6 +27,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return webServiceDataLoader.stores.count
+        
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        
+        var store: Store
+        
+        store = webServiceDataLoader.stores[indexPath.row]
+        
+        cell.textLabel!.text = store.name
+        cell.detailTextLabel!.text = store.desc
+        
+        return cell
+    }
 
 }
 

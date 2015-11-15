@@ -17,6 +17,8 @@ public class WebServiceDataLoader:DataLoader
     public var stores: [Store] = []
     public var discounts: [Discount] = []
     
+    public var storesTableView: UITableView?
+    
     public func LoadData() {
         HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/csbvEnjqnC")
             {
@@ -39,6 +41,8 @@ public class WebServiceDataLoader:DataLoader
         if(storesLoaded && discountsLoaded)
         {
             self.bindData()
+    
+            storesTableView?.reloadData()
         }
     }
 
