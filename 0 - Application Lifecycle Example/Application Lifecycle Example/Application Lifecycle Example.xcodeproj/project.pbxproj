@@ -156,6 +156,7 @@
 		52B760AD1BD8136000E75710 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Air Foi";
 				TargetAttributes = {
