@@ -1,6 +1,6 @@
 import UIKit
 import db
-
+import Kingfisher
 class ViewController: UITableViewController {
     
     @IBOutlet weak var storesTableView: UITableView!
@@ -15,6 +15,7 @@ class ViewController: UITableViewController {
         webServiceDataLoader.storesTableView = self.storesTableView
         webServiceDataLoader.LoadData()
     
+//        imageView.kf_setImageWithURL(NSURL(string:"http://www.elitereaders.com/wp-content/uploads/2015/11/angel-of-death-abu-azrael-5.jpg")!)
     }
 
     override func didReceiveMemoryWarning() {
