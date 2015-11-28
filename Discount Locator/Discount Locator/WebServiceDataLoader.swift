@@ -65,7 +65,7 @@ public class WebServiceDataLoader:DataLoader
             }
         }
         
-        print(DbController.sharedDBInstance.realm.objects(Store))
-        print(DbController.sharedDBInstance.realm.objects(Discount))
+//        print(DbController.sharedDBInstance.realm.objects(Store))
+//        print(DbController.sharedDBInstance.realm.objects(Discount))
     }
 }

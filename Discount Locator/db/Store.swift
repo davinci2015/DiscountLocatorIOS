@@ -21,7 +21,7 @@ public class Store: Object
     public dynamic var longitude: Float = 0
     public dynamic var latitude: Float = 0
     
-    var discounts: [Discount]
+    public var discounts: [Discount]
     {
         return linkingObjects(Discount.self, forProperty: "store")
     }

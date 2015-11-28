@@ -1,25 +1,20 @@
-//
-//  ViewController.swift
-//  Discount Locator
-//
-//  Created by Faculty of Organisation and Informatics on 10/11/15.
-//  Copyright © 2015 air. All rights reserved.
-//
-
 import UIKit
 import db
+
 class ViewController: UITableViewController {
     
     @IBOutlet weak var storesTableView: UITableView!
     
     var webServiceDataLoader = WebServiceDataLoader()
     
+    let blogSegueIdentifier = "ShowDiscountsSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         webServiceDataLoader.storesTableView = self.storesTableView
         webServiceDataLoader.LoadData()
-        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +40,34 @@ class ViewController: UITableViewController {
         cell.detailTextLabel!.text = store.desc
         
         return cell
+    }
+    
+    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == blogSegueIdentifier {
+            if let destination = segue.destinationViewController as? DiscountsViewController {
+                if let storeIndex = tableView.indexPathForSelectedRow {
+                    /*
+                        TO DO:
+                    
+                    *   OVO OVAKO NE MOZE!!!
+                        NEMA BOGA SA OVO OVAKO MOZE!!!!!!!!
+                    */
+                    var i = 0
+                    
+                    for store in webServiceDataLoader.stores{
+                        if(i == storeIndex.row)
+                        {
+                            destination.discounts = store.discounts
+                        }
+                        i++
+                    }
+                    
+                    
+                }
+            }
+        }
     }
 
 }
