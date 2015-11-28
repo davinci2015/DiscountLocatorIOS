@@ -14,8 +14,7 @@ class ViewController: UITableViewController {
 
         webServiceDataLoader.storesTableView = self.storesTableView
         webServiceDataLoader.LoadData()
-    
-//        imageView.kf_setImageWithURL(NSURL(string:"http://www.elitereaders.com/wp-content/uploads/2015/11/angel-of-death-abu-azrael-5.jpg")!)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,14 +30,14 @@ class ViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! StoreTableViewCell
         
         var store: Store
-        
         store = webServiceDataLoader.stores[indexPath.row]
         
-        cell.textLabel!.text = store.name
-        cell.detailTextLabel!.text = store.desc
+        cell.storeTitle.text = store.name
+        cell.storeDescription.text = store.desc
+        cell.storeImageView.kf_setImageWithURL(NSURL(string:store.imgUrl)!)
         
         return cell
     }
@@ -53,7 +52,7 @@ class ViewController: UITableViewController {
                         TO DO:
                     
                     *   OVO OVAKO NE MOZE!!!
-                        NEMA BOGA SA OVO OVAKO MOZE!!!!!!!!
+                        NEMA BOGA DA SE OVO OVAKO MOZE!!!!!!!!
                     */
                     var i = 0
                     
