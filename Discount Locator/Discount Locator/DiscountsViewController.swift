@@ -33,4 +33,3 @@ class DiscountsViewController: UITableViewController {
     }
     
 }
-

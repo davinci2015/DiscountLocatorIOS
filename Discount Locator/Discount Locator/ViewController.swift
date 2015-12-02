@@ -7,8 +7,6 @@ class ViewController: UITableViewController {
     
     var webServiceDataLoader = WebServiceDataLoader()
     
-    let blogSegueIdentifier = "ShowDiscountsSegue"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,27 +43,14 @@ class ViewController: UITableViewController {
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == blogSegueIdentifier {
+        if segue.identifier == "ShowDiscountsSegue" {
             if let destination = segue.destinationViewController as? DiscountsViewController {
                 if let storeIndex = tableView.indexPathForSelectedRow {
-                    /*
-                        TO DO:
-                    
-                    *   OVO OVAKO NE MOZE!!!
-                        NEMA BOGA DA SE OVO OVAKO MOZE!!!!!!!!
-                    */
-                    var i = 0
-                    
-                    for store in webServiceDataLoader.stores{
-                        if(i == storeIndex.row)
-                        {
-                            destination.discounts = store.discounts
-                        }
-                        i++
-                    }
-                    
+ 
+                    destination.discounts = webServiceDataLoader.stores[storeIndex.row].discounts
                     
                 }
+                
             }
         }
     }
