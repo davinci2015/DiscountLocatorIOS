@@ -1,0 +1,44 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE-edge")
+		script(src="./bower_components/angular/angular.min.js")
+	body(ng-app="application")
+		div(ng-controller="mainCtrl as main")
+			h1 Add Store
+			form
+				input(ng-model="main.store.name" type="text" placeholder="Name") 
+				br
+				input(ng-model="main.store.desc" type="text" placeholder="Description")
+				br
+				input(ng-model="main.store.lat" type="text" placeholder="Longitude")
+				br
+				input(ng-model="main.store.lng" type="text" placeholder="Latitude")
+				br
+				input(ng-model="main.store.imgUrl" type="text" placeholder="Image url")
+				br
+				button(ng-click="main.AddStore()") Insert Store
+
+			h1 Add Discounts
+			form
+				select(ng-model="main.storeID")
+					option(value="" selected="selected" disabled="disabled") Select Store
+					option(ng-repeat="store in main.stores" value="{{store._id}}") {{store.name}}
+				br
+				input(ng-model="main.discount.name" type="text" placeholder="Name") 
+				br
+				input(ng-model="main.discount.desc" type="text" placeholder="Description") 
+				br
+				input(ng-model="main.discount.startDate" type="date" placeholder="Start Date") 
+				br
+				input(ng-model="main.discount.endDate" type="date" placeholder="End Date") 
+				br
+				input(ng-model="main.discount.discount" type="number" placeholder="discount") 
+				br
+				button(ng-click="main.AddDiscount()") Insert Discount
+
+		script(src="https://cdn.socket.io/socket.io-1.0.0.js")
+		script(src="https://code.jquery.com/jquery-1.10.2.js")
+		script(src="./app/app.js")
+		script(src="./app/controllers/mainCtrl.js")
+

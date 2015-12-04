@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "davinci2015 <dvincija@foi.hr>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8"
+  }
+}
