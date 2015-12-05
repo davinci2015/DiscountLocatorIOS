@@ -1,0 +1,95 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE-edge")
+		link(href='./bower_components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+		link(href='./bower_components/bootstrap/dist/css/main.css', rel='stylesheet')
+		link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css')
+		script(src="./bower_components/angular/angular.min.js")
+	body(ng-app="application")
+		div.container
+			ul(class="nav nav-tabs" id="myTabs" role="tablist")
+				li(class="active" role="presentation")
+					a(href="#store" aria-controls="store" role="tab" data-toggle="tab") Stores
+				li(role="presentation")
+					a(href="#discounts" aria-controls="discounts" role="tab" data-toggle="tab") Discounts
+				li(role="presentation")
+					a(href="#addStore" aria-controls="addStore" role="tab" data-toggle="tab") Add store
+				li(role="presentation")
+					a(href="#addDiscount" aria-controls="addDiscount" role="tab" data-toggle="tab") Add discount
+
+			div(class="tab-content" ng-controller="mainCtrl as main")
+				div(class="tab-pane fade in active" id="store" role="tabpanel")
+					table(class="table table-hover table-bordered")
+						tr
+							th Image
+							th Name
+							th Description
+							th Latitude
+							th Longitude
+							th Edit
+							th Delete
+						tr(ng-repeat="store in main.stores")
+							td 
+								img(ng-src="{{store.imgUrl}}" class="img-rounded" width="40px")
+							td {{store.name}}
+							td {{store.desc}}
+							td {{store.lat}}
+							td {{store.lng}}
+							td(class="text-center edit-icon")
+								span(ng-click="main.FillUpdateStore(store._id)" class="glyphicon glyphicon-pencil")
+							td(class="text-center edit-icon")
+								span(ng-click="main.DeleteStore(store._id)" class="glyphicon glyphicon-remove")
+
+				div(class="tab-pane fade" id="discounts" role="tabpanel")
+					div(ng-repeat="store in main.stores" class="panel panel-default")
+						div(class="panel-heading") 
+							h4 {{store.name}}
+						div(class="panel-body")
+							div(ng-repeat="disc in store.discounts" class="discount")
+								div(class="row col-md-10")
+									p
+										strong {{disc.name}}
+									p {{disc.desc}}
+									p {{disc.startDate}} - {{disc.endDate}}
+								div(class="col-md-2 pull-right")
+									h2 {{disc.discount}}% 
+							
+
+				div(class="tab-pane fade" id="addStore" role="tabpanel")
+					form
+						input(ng-model="main.store.name" class="form-control" type="text" placeholder="Name") 
+						br
+						input(ng-model="main.store.desc" class="form-control" type="text" placeholder="Description")
+						br
+						input(ng-model="main.store.lat" class="form-control" type="text" placeholder="Longitude")
+						br
+						input(ng-model="main.store.lng" class="form-control" type="text" placeholder="Latitude")
+						br
+						input(ng-model="main.store.imgUrl" class="form-control" type="text" placeholder="Image url")
+						br
+						button(ng-click="main.AddStore()" ng-show="main.insertStore" class="btn btn-info") Insert Store
+						button(ng-click="main.UpdateStore()" ng-show="!main.insertStore" class="btn btn-info") Update Store
+				div(class="tab-pane fade" id="addDiscount" role="tabpanel")
+					form
+						select(ng-model="main.storeID" class="form-control")
+							option(value="" selected="selected" disabled="disabled") Select Store
+							option(ng-repeat="store in main.stores" value="{{store._id}}") {{store.name}}
+						br
+						input(ng-model="main.discount.name" class="form-control" type="text" placeholder="Name") 
+						br
+						input(ng-model="main.discount.desc" class="form-control" type="text" placeholder="Description") 
+						br
+						input(ng-model="main.discount.startDate" class="form-control" type="date" placeholder="Start Date") 
+						br
+						input(ng-model="main.discount.endDate" class="form-control" type="date" placeholder="End Date") 
+						br
+						input(ng-model="main.discount.discount" class="form-control" type="number" placeholder="discount") 
+						br
+						button(ng-click="main.AddDiscount()" class="btn btn-info") Insert Discount
+
+		script(src='./bower_components/jquery/dist/jquery.min.js')
+		script(src='./bower_components/bootstrap/dist/js/bootstrap.min.js')
+		script(src="./app/app.js")
+		script(src="./app/controllers/mainCtrl.js")
+

@@ -1,0 +1,14 @@
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.nav-tabs{
+	margin-bottom: 5%;
+}
+
+.edit-icon span{
+	cursor: pointer;
+}
+
+.discount{
+	margin-bottom: 100px;
+}
