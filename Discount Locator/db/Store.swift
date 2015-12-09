@@ -12,7 +12,7 @@ import RealmSwift
 
 public class Store: Object
 {
-    public dynamic var remoteId: Int = 0
+    public dynamic var remoteId: String = ""
     
     public dynamic var name: String = ""
     public dynamic var desc: String = ""

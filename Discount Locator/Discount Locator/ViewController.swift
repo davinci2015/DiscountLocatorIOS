@@ -1,6 +1,8 @@
 import UIKit
 import db
 import Kingfisher
+import RealmSwift
+
 class ViewController: UITableViewController {
     
     @IBOutlet weak var storesTableView: UITableView!
@@ -9,7 +11,12 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+        })
+        
         webServiceDataLoader.storesTableView = self.storesTableView
         webServiceDataLoader.LoadData()
         

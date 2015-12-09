@@ -13,51 +13,36 @@ import db
 
 public class JsonAdapter
 {
-    public static func getStores(json: AnyObject) -> Array<Store>
+    public static func getStores(json: AnyObject) -> (stores: Array<Store>, discounts: Array<Discount>)
     {
         var stores = [Store]()
-        let jsonStores = JSON(json)
-        
-        let items = jsonStores["items"]
-        
-        
-        for (key, subJson) in items {
-            var s:Store = Store()
-            s.remoteId = subJson["id"].int!
-            s.name = subJson["name"].string!
-            s.desc = subJson["description"].string!
-            s.imgUrl = subJson["imgUrl"].string!
-            s.latitude = subJson["latitude"].float!
-            s.longitude = subJson["longitude"].float!
-            
-            stores.append(s)
-        }
-        
-        return stores
-    }
-    
-    public static func getDiscounts(json: AnyObject) -> Array<Discount>
-    {
         var discounts = [Discount]()
-        let jsonStores = JSON(json)
-        
-        let items = jsonStores["items"]
-        
-        
+        let items = JSON(json)
+        var storeID:String
         for (key, subJson) in items {
-            var d:Discount = Discount()
-            d.remoteId = subJson["id"].int!
-            d.name = subJson["name"].string!
-            d.desc = subJson["description"].string!
-            d.discount = subJson["discount"].int!
-            d.endDate = subJson["endDate"].string!
-            d.startDate = subJson["startDate"].string!
-            d.storeId = subJson["storeId"].int!
-            
-            discounts.append(d)
+    
+            var s:Store = Store()
+            s.remoteId = subJson["_id"].string!
+            storeID = s.remoteId
+            s.name = subJson["name"].string!
+            s.desc = subJson["desc"].string!
+            s.imgUrl = subJson["imgUrl"].string!
+            s.latitude = subJson["lat"].float!
+            s.longitude = subJson["lng"].float!
+            stores.append(s)
+
+            for (keyDisc, discount) in subJson["discounts"]{
+                var d:Discount = Discount()
+                d.storeId = storeID
+                d.name = discount["name"].string!
+                d.desc = discount["desc"].string!
+                d.discount = discount["discount"].int!
+                d.endDate = discount["endDate"].string!
+                d.startDate = discount["startDate"].string!
+                discounts.append(d)
+            }
         }
         
-        return discounts
+        return (stores, discounts)
     }
-
 }

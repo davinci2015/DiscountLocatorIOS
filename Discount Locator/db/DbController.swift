@@ -14,9 +14,11 @@ public class DbController
 {
     public static var sharedDBInstance = DbController()
     
+    
+    
     public let realm = try! Realm()
-        
-//    public func addStore(remoteId: Int, name: String, desc: String, imgUrl: String, longitude: Int, latitude: Int)
+    
+//    public func addStore(remoteId: String, name: String, desc: String, imgUrl: String, longitude: float, latitude: float)
 //    {
 //        let store = Store()
 //        store.remoteId = remoteId
@@ -28,11 +30,11 @@ public class DbController
 //        
 //        realmAdd(store)
 //    }
-    
-//    public func addDiscount(remoteId: Int, name: String)
+//    
+//    public func addDiscount(storeId: String, name: String)
 //    {
 //        let discount = Discount()
-//        discount.remoteId = remoteId
+//        discount.storeId = storeId
 //        discount.name = name
 //        
 //        realmAdd(discount)

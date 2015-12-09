@@ -10,16 +10,15 @@ import Foundation
 import db
 import core
 import ws
+
 public class WebServiceDataLoader:DataLoader
 {
-    private var discountsLoaded: Bool = false
-    private var storesLoaded: Bool = false
     public var stores: [Store] = []
     public var discounts: [Discount] = []
-    
     public var storesTableView: UITableView?
     
     public func LoadData() {
+<<<<<<< HEAD
 //        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/csbvEnjqnC")
 //            {
 //                (result: AnyObject) in
@@ -34,26 +33,34 @@ public class WebServiceDataLoader:DataLoader
 //                self.discountsLoaded = true
 //                self.showLoadedData()
 //        }
+=======
+        HTTPRequest.sharedWSInstance.httprequest("https://obscure-lake-7668.herokuapp.com/stores")
+            {
+                (result: AnyObject) in
+                let result = JsonAdapter.getStores(result)
+                self.stores = result.stores
+                self.discounts = result.discounts
+                self.showLoadedData()
+        }
+>>>>>>> WebService
     }
     
     private func showLoadedData()
     {
-        if(storesLoaded && discountsLoaded)
-        {
-            self.bindData()
-    
-            storesTableView?.reloadData()
-        }
+        self.bindData()
+        storesTableView?.reloadData()
     }
 
     private func bindData()
     {
+        
         DbController.sharedDBInstance.realm.beginWrite()
         DbController.sharedDBInstance.realm.deleteAll()
         try! DbController.sharedDBInstance.realm.commitWrite()
-        
+
         for store in stores
         {
+
             DbController.sharedDBInstance.realmAdd(store)
             for discount in discounts
             {
@@ -64,8 +71,5 @@ public class WebServiceDataLoader:DataLoader
                 }
             }
         }
-        
-//        print(DbController.sharedDBInstance.realm.objects(Store))
-//        print(DbController.sharedDBInstance.realm.objects(Discount))
     }
 }
