@@ -14,7 +14,7 @@ public class HTTPRequest
     
     public func httprequest(url: String, completion: (result: AnyObject) -> Void)
     {
-        Alamofire.request(.POST, url)
+        Alamofire.request(.GET, url)
             .responseJSON { response in
                 if let json = response.result.value{
                 
