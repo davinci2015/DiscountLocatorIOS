@@ -18,22 +18,8 @@ public class WebServiceDataLoader:DataLoader
     public var storesTableView: UITableView?
     
     public func LoadData() {
-<<<<<<< HEAD
-//        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/csbvEnjqnC")
-//            {
-//                (result: AnyObject) in
-//                self.stores = JsonAdapter.getStores(result)
-//                self.storesLoaded = true
-//                self.showLoadedData()
-//        }
-//        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/ccWtDCAmRe")
-//            {
-//                (result: AnyObject) in
-//                self.discounts = JsonAdapter.getDiscounts(result)
-//                self.discountsLoaded = true
-//                self.showLoadedData()
-//        }
-=======
+
+
         HTTPRequest.sharedWSInstance.httprequest("https://obscure-lake-7668.herokuapp.com/stores")
             {
                 (result: AnyObject) in
@@ -42,7 +28,7 @@ public class WebServiceDataLoader:DataLoader
                 self.discounts = result.discounts
                 self.showLoadedData()
         }
->>>>>>> WebService
+
     }
     
     private func showLoadedData()
