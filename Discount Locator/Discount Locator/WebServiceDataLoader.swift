@@ -20,20 +20,20 @@ public class WebServiceDataLoader:DataLoader
     public var storesTableView: UITableView?
     
     public func LoadData() {
-        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/csbvEnjqnC")
-            {
-                (result: AnyObject) in
-                self.stores = JsonAdapter.getStores(result)
-                self.storesLoaded = true
-                self.showLoadedData()
-        }
-        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/ccWtDCAmRe")
-            {
-                (result: AnyObject) in
-                self.discounts = JsonAdapter.getDiscounts(result)
-                self.discountsLoaded = true
-                self.showLoadedData()
-        }
+//        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/csbvEnjqnC")
+//            {
+//                (result: AnyObject) in
+//                self.stores = JsonAdapter.getStores(result)
+//                self.storesLoaded = true
+//                self.showLoadedData()
+//        }
+//        HTTPRequest.sharedWSInstance.httprequest("http://www.json-generator.com/api/json/get/ccWtDCAmRe")
+//            {
+//                (result: AnyObject) in
+//                self.discounts = JsonAdapter.getDiscounts(result)
+//                self.discountsLoaded = true
+//                self.showLoadedData()
+//        }
     }
     
     private func showLoadedData()
