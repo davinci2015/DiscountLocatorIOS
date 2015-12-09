@@ -46,8 +46,6 @@ class ViewController: UITableViewController {
         
         return cell
     }
-    
-    
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowDiscountsSegue" {
