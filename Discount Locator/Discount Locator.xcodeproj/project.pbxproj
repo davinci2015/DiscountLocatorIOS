@@ -30,13 +30,10 @@
 		52429C931BF6321200069D37 /* JsonAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52429C921BF6321200069D37 /* JsonAdapter.swift */; };
 		52429C981BF687F500069D37 /* WebServiceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52429C971BF687F500069D37 /* WebServiceDataLoader.swift */; };
 		52429C9A1BF68EC200069D37 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52429C991BF68EC200069D37 /* DataLoader.swift */; };
-<<<<<<< HEAD
 		52B995911C18C532000B34DA /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B995901C18C532000B34DA /* NetConnection.swift */; };
-=======
 		52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9751C18C17C005C3E95 /* MapViewController.swift */; };
 		52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9771C18CB6A005C3E95 /* Artwork.swift */; };
 		52DCF97A1C18D5E6005C3E95 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9791C18D5E6005C3E95 /* TabBarController.swift */; };
->>>>>>> maps
 		52E0A8F61BF286F4008A8A4F /* ws.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E0A8F51BF286F4008A8A4F /* ws.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52E0A8FA1BF286F4008A8A4F /* ws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0A8F31BF286F4008A8A4F /* ws.framework */; };
 		52E0A8FB1BF286F4008A8A4F /* ws.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0A8F31BF286F4008A8A4F /* ws.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
