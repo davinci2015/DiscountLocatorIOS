@@ -10,11 +10,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var annotations: [MKAnnotation]?
     
+    var senderView: MKAnnotationView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
-     //necu
+        
+        mapView.mapType = MKMapType.Hybrid
+        
+        let stores = DbController.sharedDBInstance.realm.objects(Store)
+        self.stores = stores.reverse()
+        
         centerMapOnLocation(CLLocation(latitude: 46.310409, longitude: 16.343013))
         
         generateAnnotations()
@@ -23,14 +30,36 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if control == view.rightCalloutAccessoryView{
             print(view.annotation!.title) // annotation's title
             print(view.annotation!.subtitle) // annotation's subttitle
+            self.senderView = view
             
             performSegueWithIdentifier("onBasharSegue", sender: nil)
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("dogoditi ce se segue")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "onBasharSegue"
+        {
+            if let destination = segue.destinationViewController as? DiscountsViewController
+            {
+                
+                /*
+                * Tako mi ALLAHA ovo moze drukcije!!
+                */
+                var clickedStore: Store?
+                for store in stores!
+                {
+                    if(store.name == (senderView?.annotation!.title)!)
+                    {
+                        clickedStore = store
+                    }
+                }
+                destination.discounts = clickedStore!.discounts
+            }
+        }
     }
+    
+    
     func generateAnnotations(){
       
         var annArray: [MKAnnotation] = []
@@ -43,6 +72,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 discipline: "NaN",
                 coordinate: CLLocationCoordinate2D(latitude: Double(store.latitude),longitude: Double(store.longitude) ))
             annArray.append(artwork)
+            
         }
         
         mapView.addAnnotations(annArray)

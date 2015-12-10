@@ -17,7 +17,6 @@ public class WebServiceDataLoader:DataLoader
     public var discounts: [Discount] = []
     public var storesTableView: UITableView?
     
-    internal var mapViewTab: MapViewController?
     internal var tabViewTabBar: TabBarController?
     
     public func LoadData() {
@@ -39,7 +38,6 @@ public class WebServiceDataLoader:DataLoader
         self.bindData()
         storesTableView?.reloadData()
         
-        mapViewTab?.stores = stores
         tabViewTabBar?.tabBar.items![1].enabled=true
     }
 

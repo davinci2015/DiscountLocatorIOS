@@ -19,7 +19,6 @@ class ViewController: UITableViewController {
         })
         
         webServiceDataLoader.storesTableView = self.storesTableView
-        webServiceDataLoader.mapViewTab = self.tabBarController?.viewControllers![1] as! MapViewController
         webServiceDataLoader.tabViewTabBar=self.tabBarController as! TabBarController
         webServiceDataLoader.LoadData()
         
