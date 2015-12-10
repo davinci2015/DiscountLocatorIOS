@@ -17,6 +17,8 @@ public class WebServiceDataLoader:DataLoader
     public var discounts: [Discount] = []
     public var storesTableView: UITableView?
     
+    internal var tabViewTabBar: TabBarController?
+    
     public func LoadData() {
         if(NetConnection.Connection.isConnectedToNetwork()){
             HTTPRequest.sharedWSInstance.httprequest("https://obscure-lake-7668.herokuapp.com/stores")
@@ -37,6 +39,8 @@ public class WebServiceDataLoader:DataLoader
     {
         self.bindData()
         storesTableView?.reloadData()
+        
+        tabViewTabBar?.tabBar.items![1].enabled=true
     }
     
     private func showDataFromLocalDB()
