@@ -17,30 +17,44 @@ public class WebServiceDataLoader:DataLoader
     public var discounts: [Discount] = []
     public var storesTableView: UITableView?
     
+    private var discountsLoaded: Bool = false
+    private var storesLoaded: Bool = false
+    
     internal var tabViewTabBar: TabBarController?
     
     public func LoadData() {
+        var params:[String:String] = ["method": "getAll"]
         if(NetConnection.Connection.isConnectedToNetwork()){
-            HTTPRequest.sharedWSInstance.httprequest("https://obscure-lake-7668.herokuapp.com/stores")
-                {
-                    (result: AnyObject) in
-                    let result = JsonAdapter.getStores(result)
-                    self.stores = result.stores
-                    self.discounts = result.discounts
-                    self.showLoadedData()
-            }
+            
+            HTTPRequest.sharedWSInstance.httprequest("http://cortex.foi.hr/mtl/courses/air/stores.php", params: params)
+                        {
+                            (result: AnyObject) in
+                            self.stores = JsonAdapter.getStores(result)
+                            self.storesLoaded = true
+                            self.showLoadedData()
+                    }
+            HTTPRequest.sharedWSInstance.httprequest("http://cortex.foi.hr/mtl/courses/air/discounts.php", params: params)
+                        {
+                            (result: AnyObject) in
+                            self.discounts = JsonAdapter.getDiscounts(result)
+                            self.discountsLoaded = true
+                            self.showLoadedData()
+                    }
         }
         else {
             self.showDataFromLocalDB()
         }
     }
     
+    
     private func showLoadedData()
     {
-        self.bindData()
-        storesTableView?.reloadData()
-        
-        tabViewTabBar?.tabBar.items![1].enabled=true
+        if(storesLoaded && discountsLoaded)
+        {
+            self.bindData()
+            storesTableView?.reloadData()
+            tabViewTabBar?.tabBar.items![1].enabled=true
+        }
     }
     
     private func showDataFromLocalDB()
@@ -65,7 +79,6 @@ public class WebServiceDataLoader:DataLoader
 
         for store in stores
         {
-
             DbController.sharedDBInstance.realmAdd(store)
             for discount in discounts
             {

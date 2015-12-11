@@ -14,14 +14,14 @@ class ViewController: UITableViewController {
      
         
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            schemaVersion: 1,
+            schemaVersion: 2,
             migrationBlock: { migration, oldSchemaVersion in
         })
         
         webServiceDataLoader.storesTableView = self.storesTableView
-        webServiceDataLoader.tabViewTabBar=self.tabBarController as! TabBarController
+        webServiceDataLoader.tabViewTabBar = self.tabBarController as! TabBarController
         webServiceDataLoader.LoadData()
-        
+
         
     }
 

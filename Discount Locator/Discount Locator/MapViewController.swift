@@ -44,7 +44,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             {
                 
                 /*
-                * Tako mi ALLAHA ovo moze drukcije!!
+                * Tako mi ALLAHA ovo moze drukcije!! ovo nije pravi put
                 */
                 var clickedStore: Store?
                 for store in stores!
@@ -68,7 +68,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             
             let artwork = Artwork(title: store.name,
                 locationName: store.desc,
-                storeId: store.remoteId,
+                storeId: String(store.remoteId),
                 discipline: "NaN",
                 coordinate: CLLocationCoordinate2D(latitude: Double(store.latitude),longitude: Double(store.longitude) ))
             annArray.append(artwork)
