@@ -9,7 +9,7 @@
         <!--Stores-->
         <scene sceneID="rFn-aI-AiF">
             <objects>
-                <tableViewController id="ISs-KI-mPp" customClass="ViewController" customModule="Discount_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StoresViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ISs-KI-mPp" customClass="ViewController" customModule="Discount_Locator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ZH-JA-5nD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
         <!--Map View Controller-->
         <scene sceneID="UPM-1a-gld">
             <objects>
-                <viewController id="Knp-jj-3BT" customClass="MapViewController" customModule="Discount_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Knp-jj-3BT" customClass="MapViewController" customModule="Discount_Locator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QNA-Oz-82E"/>
                         <viewControllerLayoutGuide type="bottom" id="qUg-sz-isR"/>
@@ -180,7 +180,7 @@
         <!--Back TableVC-->
         <scene sceneID="tyj-gX-sce">
             <objects>
-                <tableViewController id="qcV-Os-dv2" customClass="BackTableVC" customModule="Discount_Locator" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BackTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qcV-Os-dv2" customClass="BackTableVC" customModule="Discount_Locator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qd2-zm-BIt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,6 +196,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="YxE-7a-RKm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="o3u-Zt-e2B"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" id="cOu-Qx-Enh">
                                 <rect key="frame" x="0.0" y="72" width="600" height="44"/>
@@ -206,6 +209,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="YxE-7a-RKm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="iHz-Jt-bBO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -216,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEd-uw-UfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1653" y="294"/>
+            <point key="canvasLocation" x="-1413" y="304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SIR-nS-mxx">
@@ -233,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd5-L6-Gwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1845" y="1334"/>
+            <point key="canvasLocation" x="-1685" y="1306"/>
         </scene>
         <!--Vc Nav-->
         <scene sceneID="Bb7-YL-Z5A">
@@ -243,12 +249,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <animations/>
-                        <connections>
-                            <segue destination="Knp-jj-3BT" kind="embed" id="bF6-bh-Kbk"/>
-                        </connections>
                     </containerView>
                     <navigationItem key="navigationItem" id="S7T-NU-Fgq">
-                        <barButtonItem key="leftBarButtonItem" title="Open" id="okA-hN-30L"/>
+                        <barButtonItem key="leftBarButtonItem" image="Image" id="okA-hN-30L"/>
                     </navigationItem>
                     <connections>
                         <outlet property="Open" destination="okA-hN-30L" id="iYA-UC-CZ5"/>
@@ -257,10 +260,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKa-ea-q85" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-902" y="938"/>
+            <point key="canvasLocation" x="-914" y="1076"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cmr-lk-VRP"/>
+        <segue reference="o3u-Zt-e2B"/>
     </inferredMetricsTieBreakers>
 </document>

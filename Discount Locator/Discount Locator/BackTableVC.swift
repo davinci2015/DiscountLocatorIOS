@@ -9,14 +9,15 @@
 import Foundation
 
 class BackTableVC: UITableViewController{
-
+    
     var tableArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("tusam")
         tableArray = ["Stores list", "Map"]
-        
+ 
     }
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableArray.count
         
@@ -25,12 +26,17 @@ class BackTableVC: UITableViewController{
          print("tusam2")
         let cell = tableView.dequeueReusableCellWithIdentifier(tableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = tableArray [indexPath.row]
+        
         return cell
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        VcNav.viewControllerNumber = indexPath.row
+    }
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        var DestVC=segue.destinationViewController as! ViewController
-//        var indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
-//        //DestVC.varView = indexPath.row
+//        let DestVC=segue.destinationViewController as! VcNav
+//        let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
+//        DestVC.controllerNumber = indexPath.row
 //        
 //    }
+    
 }

@@ -17,7 +17,7 @@ public class WebServiceDataLoader:DataLoader
     public var discounts: [Discount] = []
     public var storesTableView: UITableView?
     
-    internal var tabViewTabBar: TabBarController?
+  
     
     public func LoadData() {
         if(NetConnection.Connection.isConnectedToNetwork()){
@@ -40,7 +40,6 @@ public class WebServiceDataLoader:DataLoader
         self.bindData()
         storesTableView?.reloadData()
         
-        tabViewTabBar?.tabBar.items![1].enabled=true
     }
     
     private func showDataFromLocalDB()

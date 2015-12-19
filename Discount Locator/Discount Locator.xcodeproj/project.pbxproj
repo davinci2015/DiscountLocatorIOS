@@ -36,7 +36,6 @@
 		52B995911C18C532000B34DA /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B995901C18C532000B34DA /* NetConnection.swift */; };
 		52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9751C18C17C005C3E95 /* MapViewController.swift */; };
 		52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9771C18CB6A005C3E95 /* Artwork.swift */; };
-		52DCF97A1C18D5E6005C3E95 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9791C18D5E6005C3E95 /* TabBarController.swift */; };
 		52E0A8F61BF286F4008A8A4F /* ws.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E0A8F51BF286F4008A8A4F /* ws.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52E0A8FA1BF286F4008A8A4F /* ws.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0A8F31BF286F4008A8A4F /* ws.framework */; };
 		52E0A8FB1BF286F4008A8A4F /* ws.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52E0A8F31BF286F4008A8A4F /* ws.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -118,7 +117,6 @@
 		52B995901C18C532000B34DA /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
 		52DCF9751C18C17C005C3E95 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		52DCF9791C18D5E6005C3E95 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		52E0A8F31BF286F4008A8A4F /* ws.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ws.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E0A8F51BF286F4008A8A4F /* ws.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ws.h; sourceTree = "<group>"; };
 		52E0A8F71BF286F4008A8A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				520F19CC1BF2818700A25520 /* Info.plist */,
 				52429C971BF687F500069D37 /* WebServiceDataLoader.swift */,
 				52DCF9771C18CB6A005C3E95 /* Artwork.swift */,
-				52DCF9791C18D5E6005C3E95 /* TabBarController.swift */,
 				524BF9C71C2377C600AFAA27 /* SWRevealViewController.h */,
 				524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */,
 				524BF9C61C2377C500AFAA27 /* Discount Locator-Bridging-Header.h */,
@@ -509,7 +506,6 @@
 			files = (
 				524BF9CB1C2379CD00AFAA27 /* VcNav.swift in Sources */,
 				520F19C31BF2818700A25520 /* ViewController.swift in Sources */,
-				52DCF97A1C18D5E6005C3E95 /* TabBarController.swift in Sources */,
 				52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */,
 				52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */,
 				524BF9CD1C237DB800AFAA27 /* BackTableVC.swift in Sources */,
