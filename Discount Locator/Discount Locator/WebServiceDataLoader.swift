@@ -17,10 +17,14 @@ public class WebServiceDataLoader:DataLoader
     public var discounts: [Discount] = []
     public var storesTableView: UITableView?
     
+<<<<<<< HEAD
     private var discountsLoaded: Bool = false
     private var storesLoaded: Bool = false
     
     internal var tabViewTabBar: TabBarController?
+=======
+  
+>>>>>>> NavigationDrawer
     
     public func LoadData() {
         var params:[String:String] = ["method": "getAll"]
@@ -49,12 +53,18 @@ public class WebServiceDataLoader:DataLoader
     
     private func showLoadedData()
     {
+<<<<<<< HEAD
         if(storesLoaded && discountsLoaded)
         {
             self.bindData()
             storesTableView?.reloadData()
             tabViewTabBar?.tabBar.items![1].enabled=true
         }
+=======
+        self.bindData()
+        storesTableView?.reloadData()
+        
+>>>>>>> NavigationDrawer
     }
     
     private func showDataFromLocalDB()

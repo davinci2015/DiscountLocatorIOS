@@ -19,7 +19,11 @@ class ViewController: UITableViewController {
         })
         
         webServiceDataLoader.storesTableView = self.storesTableView
+<<<<<<< HEAD
         webServiceDataLoader.tabViewTabBar = self.tabBarController as! TabBarController
+=======
+       
+>>>>>>> NavigationDrawer
         webServiceDataLoader.LoadData()
 
         
