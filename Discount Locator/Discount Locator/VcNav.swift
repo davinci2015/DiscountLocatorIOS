@@ -69,7 +69,7 @@ class VcNav:UIViewController{
         Open.action = Selector("revealToggle:")
         
        
-        //showView("stores")
+       
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
