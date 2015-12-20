@@ -22,7 +22,6 @@ class SettingsTableViewController: UITableViewController {
 
     @IBAction func OnBackSwipeChanged(sender: UISwitch) {
          prefs.setBool(sender.on, forKey: "UseBackSwipe")
-         Settings.changeBackSwipeSetting(sender.on)
     }
     
     func loadFromUserPrefs(){
