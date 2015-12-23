@@ -11,7 +11,6 @@ import UIKit
 
 
 class Settings {
-    let prefs = NSUserDefaults.standardUserDefaults()
     static func changeAnimationSetting(newState:Bool){
          UIView.setAnimationsEnabled(newState)
     }
@@ -24,5 +23,14 @@ extension UIViewController { //koristenjem extenzija se prosiruju funkcionalnost
         else {
               self.navigationController!.interactivePopGestureRecognizer!.enabled = false
         }
+    }
+    func animationCheck(){
+        if(NSUserDefaults.standardUserDefaults().boolForKey("UseAnimations")){
+            Settings.changeAnimationSetting(true)
+        }
+        else {
+            Settings.changeAnimationSetting(false)
+        }
+        
     }
 }

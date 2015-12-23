@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import db
 
 class ModalViewController: UIViewController {
 
+    
+    var webServiceDataLoader = WebServiceDataLoader()
     @IBAction func onClose(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: {});
 
@@ -26,6 +29,21 @@ class ModalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+       if segue.identifier == "onSearchDiscountsSegue" {
+        if let destination = segue.destinationViewController as? UINavigationController {
+                   var discountsForPassing: [Discount] = []
+        let discounts = DbController.sharedDBInstance.realmFetch(Discount)
+        for discount in discounts{
+            discountsForPassing.append(discount as! Discount)
+        }
+            let searchViewcontroller = destination.viewControllers.first as! SearchDiscountsTabeViewController
+            searchViewcontroller.discounts = discountsForPassing
+        }
+    }
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -36,6 +36,7 @@
 		524BF9C91C2377C600AFAA27 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */; };
 		524BF9CB1C2379CD00AFAA27 /* VcNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CA1C2379CD00AFAA27 /* VcNav.swift */; };
 		524BF9CD1C237DB800AFAA27 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */; };
+		5282F21B1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */; };
 		52B995911C18C532000B34DA /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B995901C18C532000B34DA /* NetConnection.swift */; };
 		52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9751C18C17C005C3E95 /* MapViewController.swift */; };
 		52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9771C18CB6A005C3E95 /* Artwork.swift */; };
@@ -120,6 +121,7 @@
 		524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		524BF9CA1C2379CD00AFAA27 /* VcNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcNav.swift; sourceTree = "<group>"; };
 		524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
+		5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDiscountsTabeViewController.swift; sourceTree = "<group>"; };
 		52B995901C18C532000B34DA /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
 		52DCF9751C18C17C005C3E95 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				522DEE6B1C0A0CA8000B9191 /* StoreTableViewCell.swift */,
 				520F19C41BF2818700A25520 /* Main.storyboard */,
 				524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */,
+				5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */,
 				522DEE691C09DE28000B9191 /* DiscountsViewController.swift */,
 				524BF9CA1C2379CD00AFAA27 /* VcNav.swift */,
 				520F19C71BF2818700A25520 /* Assets.xcassets */,
@@ -520,6 +523,7 @@
 				521446A11C26F9530096D238 /* ModalViewController.swift in Sources */,
 				52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */,
 				524BF9CD1C237DB800AFAA27 /* BackTableVC.swift in Sources */,
+				5282F21B1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift in Sources */,
 				520F19C11BF2818700A25520 /* AppDelegate.swift in Sources */,
 				524BF9C91C2377C600AFAA27 /* SWRevealViewController.m in Sources */,
 				521446A31C27238B0096D238 /* SettingsTableViewController.swift in Sources */,

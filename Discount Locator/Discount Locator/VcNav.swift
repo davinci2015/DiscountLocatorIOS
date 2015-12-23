@@ -71,7 +71,7 @@ class VcNav:UIViewController{
        
        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
+       
     }
     
     override func didReceiveMemoryWarning() {

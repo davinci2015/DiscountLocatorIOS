@@ -13,9 +13,8 @@ class BackTableVC: UITableViewController{
     var tableArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("tusam")
+    
         tableArray = ["Stores list", "Map"]
- 
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -23,7 +23,7 @@ class ViewController: UITableViewController {
       
 
         webServiceDataLoader.LoadData()
-
+        self.animationCheck() //gasi animacije pošto je initial view controller
         
     }
 

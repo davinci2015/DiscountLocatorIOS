@@ -8,6 +8,7 @@ class DiscountsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backSwipeCheck()
+        
     }
     
     override func didReceiveMemoryWarning() {
