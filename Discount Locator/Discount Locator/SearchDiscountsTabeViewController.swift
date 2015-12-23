@@ -9,7 +9,10 @@
 import UIKit
 import db
 
-class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsUpdating{
+class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsUpdating, UIGestureRecognizerDelegate{
+    //implementiramo protokol UISearchResultsUpdating - jedina potrebna metoda je updateSearchResultsForSearchController te property koji uzimaUISearchController ()
+    //protokol sluzi za implementaciju promjene stanja kad user upise nesto u search bar
+    
     var discounts: [Discount] = []
     var resultSearchController = UISearchController ()
     var filteredDiscounts = [Discount]()
@@ -17,30 +20,39 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //self.backSwipeCheck()
-        self.resultSearchController = UISearchController(searchResultsController: nil)
+        //custom backswipe pošto smo došli iz modalviewa na
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: "handleGesture")
+        self.backSwipeCheck()
+        
+        self.resultSearchController = UISearchController(searchResultsController: nil) //novi searchbar
         self.resultSearchController.searchResultsUpdater=self
-        self.resultSearchController.dimsBackgroundDuringPresentation = false
-        self.resultSearchController.searchBar.sizeToFit()
-        self.tableView.tableHeaderView = self.resultSearchController.searchBar
+        self.resultSearchController.dimsBackgroundDuringPresentation = false //inače bi dimmao/disableo cijeli tableview dolje (zapravo cijeli viewcontroller) - nebi mogo kliknut na discount
+        self.resultSearchController.searchBar.sizeToFit() //preko cijelog ekrana
+        self.tableView.tableHeaderView = self.resultSearchController.searchBar //stavljamo searchbar u zaglavlje tableviewa
         definesPresentationContext=true //ako odeš na neki drugi ViewController search bar nece ostati tu
-        self.tableView.reloadData()
+        self.tableView.reloadData() //učitaj podatke
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func handleGesture(){
+        performSegueWithIdentifier("searchToRevealSegue", sender: self)
+    }
     //helper funkcija kod filtriranja discountova
-    func filterContentForSearchText(searchText: String, scope: String = "All") { //pretrazivanje po imenu discounta
+    func filterContentForSearchText(searchText: String, scope: String = "All") { //pretrazivanje po imenu discounta i po descriptionu
         //filter() takes a closure of type (discount: Discount) -> Bool. It then loops over all the elements of the array, and calls the closure, passing in the current element, for every one of the elements.
         filteredDiscounts = discounts.filter { discount in
             return discount.name.lowercaseString.containsString(searchText.lowercaseString)
         }
-        tableView.reloadData()
-    }
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        //dodaj u filtar i description (posto u njemu moze pisati artikl ili nesto slicno)
+        filteredDiscounts.appendContentsOf(discounts.filter { discount in
+            return discount.description.lowercaseString.containsString(searchText.lowercaseString)
+            }
+        )
+        tableView.reloadData() //pozivaju se 2 donje metode tableView
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,11 +77,12 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
         cell.detailTextLabel!.text = discount.desc
         return cell
     }
+    //kad god user doda/oduzima tekst iz search bara, UISearchController će obavijestiti SearchDiscountsTabeViewController klasu (odnosno klasu koja implementira gornji protokol) putem ove metode
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) { //metoda koja reagira na klik discounta (reda tabele)
         
         let title = "📈 " + discounts[indexPath.row].name + " : " + String(discounts[indexPath.row].discount) + "%"
         

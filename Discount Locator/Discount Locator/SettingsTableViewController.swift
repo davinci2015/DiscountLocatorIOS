@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController, UIGestureRecognizerDelegate {
 
     let prefs = NSUserDefaults.standardUserDefaults()
  
@@ -22,22 +22,24 @@ class SettingsTableViewController: UITableViewController {
 
     @IBAction func OnBackSwipeChanged(sender: UISwitch) {
          prefs.setBool(sender.on, forKey: "UseBackSwipe")
+         backSwipeCheck()
     }
     
     func loadFromUserPrefs(){
         useAnimationsSwitch.setOn(prefs.boolForKey("UseAnimations"),animated:false)
         useBackSwipeSwitch.setOn(prefs.boolForKey("UseBackSwipe"), animated:false)
     }
+    func handleGesture(){
+       performSegueWithIdentifier("settingsToRevealSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         loadFromUserPrefs()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: "handleGesture")
+        backSwipeCheck()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -29,7 +29,7 @@ class ModalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) { //slanje podataka searchDiscountTableViewControlleru
         
        if segue.identifier == "onSearchDiscountsSegue" {
         if let destination = segue.destinationViewController as? UINavigationController {
@@ -38,6 +38,7 @@ class ModalViewController: UIViewController {
         for discount in discounts{
             discountsForPassing.append(discount as! Discount)
         }
+            //pošto segue ide u navigController treba ga prvo dohvatit pa iz njega pripadajući view kojem predajemo discounte
             let searchViewcontroller = destination.viewControllers.first as! SearchDiscountsTabeViewController
             searchViewcontroller.discounts = discountsForPassing
         }

@@ -222,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEd-uw-UfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1413" y="304"/>
+            <point key="canvasLocation" x="-1421" y="344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SIR-nS-mxx">
@@ -239,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd5-L6-Gwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1685" y="1306"/>
+            <point key="canvasLocation" x="-1709" y="1546"/>
         </scene>
         <!--Vc Nav-->
         <scene sceneID="Bb7-YL-Z5A">
@@ -283,7 +283,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkS-l0-rBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-940" y="3355"/>
+            <point key="canvasLocation" x="172" y="3451"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Uha-E5-2wq">
@@ -456,7 +456,7 @@
                     <navigationItem key="navigationItem" id="Fu3-EW-tQY">
                         <barButtonItem key="leftBarButtonItem" title="⬅︎ Back" id="XZK-y5-jVZ">
                             <connections>
-                                <segue destination="xAU-pX-nC8" kind="showDetail" id="GLs-rW-XgV"/>
+                                <segue destination="xAU-pX-nC8" kind="showDetail" identifier="settingsToRevealSegue" id="GLs-rW-XgV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -467,7 +467,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5KY-Bd-XLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2643" y="3094"/>
+            <point key="canvasLocation" x="-3267" y="3374"/>
         </scene>
         <!--Modal-->
         <scene sceneID="7gx-X8-8DI">
@@ -552,7 +552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6j-K6-WMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600" y="2222"/>
+            <point key="canvasLocation" x="64" y="2510"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCW-Sq-d87">
@@ -569,7 +569,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZt-I1-SL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1457" y="2078"/>
+            <point key="canvasLocation" x="-1125" y="2302"/>
         </scene>
         <!--Search discounts-->
         <scene sceneID="UBc-CT-32F">
@@ -618,7 +618,7 @@
                     <navigationItem key="navigationItem" id="tWM-b3-dGg">
                         <barButtonItem key="leftBarButtonItem" title="⬅︎ Back" id="FpM-mE-n64">
                             <connections>
-                                <segue destination="xAU-pX-nC8" kind="showDetail" id="Zbj-2f-bAP"/>
+                                <segue destination="xAU-pX-nC8" kind="showDetail" identifier="searchToRevealSegue" id="Zbj-2f-bAP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -636,7 +636,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-1648" y="2795"/>
+            <point key="canvasLocation" x="-2400" y="2555"/>
         </scene>
     </scenes>
     <resources>
@@ -645,7 +645,7 @@
         <image name="Settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7bj-8R-fnE"/>
+        <segue reference="o3u-Zt-e2B"/>
         <segue reference="Zbj-2f-bAP"/>
         <segue reference="dn3-gr-oCq"/>
     </inferredMetricsTieBreakers>

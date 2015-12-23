@@ -31,11 +31,7 @@ class BackTableVC: UITableViewController{
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         VcNav.viewControllerNumber = indexPath.row
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let DestVC=segue.destinationViewController as! VcNav
-//        let indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow!
-//        DestVC.controllerNumber = indexPath.row
-//        
-//    }
+    
+
     
 }
