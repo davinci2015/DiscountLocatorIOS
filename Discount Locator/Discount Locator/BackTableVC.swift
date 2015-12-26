@@ -22,7 +22,6 @@ class BackTableVC: UITableViewController{
         
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         print("tusam2")
         let cell = tableView.dequeueReusableCellWithIdentifier(tableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = tableArray [indexPath.row]
         

@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 
-class Settings {
+class Settings { //klasa koja sluzi za konkretne izmjene na globalnoj razini 
     static func changeAnimationSetting(newState:Bool){
          UIView.setAnimationsEnabled(newState)
     }
-}
+   }
 extension UIViewController { //koristenjem extenzija se prosiruju funkcionalnosti postojecih klasa
     func backSwipeCheck(){ //svaki UIViewcontroller ce sada imati funkcionalnost za provjeru jel se smije backswipeati il ne
         if(NSUserDefaults.standardUserDefaults().boolForKey("UseBackSwipe")){

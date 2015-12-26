@@ -30,6 +30,7 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
         self.resultSearchController.dimsBackgroundDuringPresentation = false //inače bi dimmao/disableo cijeli tableview dolje (zapravo cijeli viewcontroller) - nebi mogo kliknut na discount
         self.resultSearchController.searchBar.sizeToFit() //preko cijelog ekrana
         self.tableView.tableHeaderView = self.resultSearchController.searchBar //stavljamo searchbar u zaglavlje tableviewa
+        self.resultSearchController.searchBar.placeholder="search discounts..."
         definesPresentationContext=true //ako odeš na neki drugi ViewController search bar nece ostati tu
         self.tableView.reloadData() //učitaj podatke
     }
@@ -41,6 +42,14 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
     func handleGesture(){
         performSegueWithIdentifier("searchToRevealSegue", sender: self)
     }
+    func alreadyExists(keyDiscount:Discount)->Bool{
+        for discount in filteredDiscounts {
+            if(discount.name==keyDiscount.name) {
+                return true;
+            }
+        }
+        return false;
+    }
     //helper funkcija kod filtriranja discountova
     func filterContentForSearchText(searchText: String, scope: String = "All") { //pretrazivanje po imenu discounta i po descriptionu
         //filter() takes a closure of type (discount: Discount) -> Bool. It then loops over all the elements of the array, and calls the closure, passing in the current element, for every one of the elements.
@@ -49,7 +58,13 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
         }
         //dodaj u filtar i description (posto u njemu moze pisati artikl ili nesto slicno)
         filteredDiscounts.appendContentsOf(discounts.filter { discount in
-            return discount.description.lowercaseString.containsString(searchText.lowercaseString)
+                    if(!self.alreadyExists(discount)){
+                        return discount.description.lowercaseString.containsString(searchText.lowercaseString)
+                    }
+                    else {
+                        return false
+                    }
+            
             }
         )
         tableView.reloadData() //pozivaju se 2 donje metode tableView
