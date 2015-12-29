@@ -109,14 +109,14 @@
 		520F1A291BF2860A00A25520 /* StoreCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCategories.swift; sourceTree = "<group>"; };
 		521446A01C26F9530096D238 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		521446A21C27238B0096D238 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		521446A41C2726250096D238 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		521446A41C2726250096D238 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = "Discount Locator/Settings.swift"; sourceTree = "<group>"; };
 		522DEE691C09DE28000B9191 /* DiscountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsViewController.swift; sourceTree = "<group>"; };
 		522DEE6B1C0A0CA8000B9191 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		52429C861BF631FA00069D37 /* core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52429C881BF631FA00069D37 /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		52429C8A1BF631FA00069D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52429C921BF6321200069D37 /* JsonAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonAdapter.swift; sourceTree = "<group>"; };
-		52429C971BF687F500069D37 /* WebServiceDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceDataLoader.swift; sourceTree = "<group>"; };
+		52429C971BF687F500069D37 /* WebServiceDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceDataLoader.swift; path = "Discount Locator/WebServiceDataLoader.swift"; sourceTree = "<group>"; };
 		52429C991BF68EC200069D37 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		524BF9C61C2377C500AFAA27 /* Discount Locator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Discount Locator-Bridging-Header.h"; sourceTree = "<group>"; };
 		524BF9C71C2377C600AFAA27 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDiscountsTabeViewController.swift; sourceTree = "<group>"; };
 		52B995901C18C532000B34DA /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
 		52DCF9751C18C17C005C3E95 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artwork.swift; path = "Discount Locator/Artwork.swift"; sourceTree = "<group>"; };
 		52E0A8F31BF286F4008A8A4F /* ws.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ws.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E0A8F51BF286F4008A8A4F /* ws.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ws.h; sourceTree = "<group>"; };
 		52E0A8F71BF286F4008A8A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,27 +202,11 @@
 			isa = PBXGroup;
 			children = (
 				520F19C01BF2818700A25520 /* AppDelegate.swift */,
-				520F19C21BF2818700A25520 /* ViewController.swift */,
-				52DCF9751C18C17C005C3E95 /* MapViewController.swift */,
-				522DEE6B1C0A0CA8000B9191 /* StoreTableViewCell.swift */,
-				52E79CB71C2C853B0063157C /* ModalRadiusPickerViewController.swift */,
-				520F19C41BF2818700A25520 /* Main.storyboard */,
-				52E79CB51C2C7AF30063157C /* ApplicationSettingsTableViewController.swift */,
-				524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */,
-				5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */,
-				522DEE691C09DE28000B9191 /* DiscountsViewController.swift */,
-				524BF9CA1C2379CD00AFAA27 /* VcNav.swift */,
+				5294B0EF1C31B8FF005619D2 /* Helpers */,
+				5294B0EE1C31B4DC005619D2 /* Views */,
+				5294B0ED1C31B43C005619D2 /* ViewControllers */,
 				520F19C71BF2818700A25520 /* Assets.xcassets */,
-				520F19C91BF2818700A25520 /* LaunchScreen.storyboard */,
 				520F19CC1BF2818700A25520 /* Info.plist */,
-				52429C971BF687F500069D37 /* WebServiceDataLoader.swift */,
-				52DCF9771C18CB6A005C3E95 /* Artwork.swift */,
-				524BF9C71C2377C600AFAA27 /* SWRevealViewController.h */,
-				524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */,
-				524BF9C61C2377C500AFAA27 /* Discount Locator-Bridging-Header.h */,
-				521446A01C26F9530096D238 /* ModalViewController.swift */,
-				521446A21C27238B0096D238 /* SettingsTableViewController.swift */,
-				521446A41C2726250096D238 /* Settings.swift */,
 			);
 			path = "Discount Locator";
 			sourceTree = "<group>";
@@ -252,6 +236,47 @@
 				52429C991BF68EC200069D37 /* DataLoader.swift */,
 			);
 			path = core;
+			sourceTree = "<group>";
+		};
+		5294B0ED1C31B43C005619D2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				520F19C21BF2818700A25520 /* ViewController.swift */,
+				52DCF9751C18C17C005C3E95 /* MapViewController.swift */,
+				522DEE6B1C0A0CA8000B9191 /* StoreTableViewCell.swift */,
+				52E79CB71C2C853B0063157C /* ModalRadiusPickerViewController.swift */,
+				52E79CB51C2C7AF30063157C /* ApplicationSettingsTableViewController.swift */,
+				524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */,
+				5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */,
+				522DEE691C09DE28000B9191 /* DiscountsViewController.swift */,
+				524BF9CA1C2379CD00AFAA27 /* VcNav.swift */,
+				521446A01C26F9530096D238 /* ModalViewController.swift */,
+				521446A21C27238B0096D238 /* SettingsTableViewController.swift */,
+				524BF9C71C2377C600AFAA27 /* SWRevealViewController.h */,
+				524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */,
+				524BF9C61C2377C500AFAA27 /* Discount Locator-Bridging-Header.h */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5294B0EE1C31B4DC005619D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				520F19C41BF2818700A25520 /* Main.storyboard */,
+				520F19C91BF2818700A25520 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5294B0EF1C31B8FF005619D2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52429C971BF687F500069D37 /* WebServiceDataLoader.swift */,
+				521446A41C2726250096D238 /* Settings.swift */,
+				52DCF9771C18CB6A005C3E95 /* Artwork.swift */,
+			);
+			name = Helpers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		52E0A8F41BF286F4008A8A4F /* ws */ = {
@@ -704,6 +729,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Discount Locator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "air.hr.foi.Discount-Locator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -720,6 +746,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Discount Locator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "air.hr.foi.Discount-Locator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
