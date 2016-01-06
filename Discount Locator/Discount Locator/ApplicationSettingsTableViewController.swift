@@ -28,6 +28,6 @@ class ApplicationSettingsTableViewController: UITableViewController {
         loadFromUserPrefs()
         backSwipeCheck()
     }
-
+    
     
 }

@@ -22,7 +22,7 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
         super.viewDidLoad()
         //custom backswipe pošto smo došli iz modalviewa na
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: "handleGesture")
+        self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: "handleGesture:")
         self.backSwipeCheck()
         
         self.resultSearchController = UISearchController(searchResultsController: nil) //novi searchbar
@@ -34,13 +34,15 @@ class SearchDiscountsTabeViewController: UITableViewController, UISearchResultsU
         definesPresentationContext=true //ako odeš na neki drugi ViewController search bar nece ostati tu
         self.tableView.reloadData() //učitaj podatke
     }
-    
+      
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func handleGesture(){
-        performSegueWithIdentifier("searchToRevealSegue", sender: self)
+    func handleGesture(gestureRecognizer:UIGestureRecognizer){
+        if(gestureRecognizer.state == .Ended) {
+             performSegueWithIdentifier("searchToRevealSegue", sender: self)
+        }
     }
     func alreadyExists(keyDiscount:Discount)->Bool{
         for discount in filteredDiscounts {

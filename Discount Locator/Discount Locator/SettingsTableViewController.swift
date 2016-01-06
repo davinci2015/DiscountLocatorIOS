@@ -29,17 +29,21 @@ class SettingsTableViewController: UITableViewController, UIGestureRecognizerDel
         useAnimationsSwitch.setOn(prefs.boolForKey("UseAnimations"),animated:false)
         useBackSwipeSwitch.setOn(prefs.boolForKey("UseBackSwipe"), animated:false)
     }
-    func handleGesture(){
-       performSegueWithIdentifier("settingsToRevealSegue", sender: self)
+    func handleGesture(gestureRecongizer: UISwipeGestureRecognizer){
+        if gestureRecongizer.state == .Ended{
+            performSegueWithIdentifier("settingsToRevealSegue", sender: self)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         loadFromUserPrefs()
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: "handleGesture")
         backSwipeCheck()
+        //dodavanje handlera za swipe
+    self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer
+    self.navigationController?.interactivePopGestureRecognizer?.addTarget(self, action: "handleGesture:")
     }
-    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

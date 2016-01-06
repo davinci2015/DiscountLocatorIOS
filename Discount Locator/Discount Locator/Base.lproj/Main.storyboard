@@ -635,6 +635,7 @@
                             <outlet property="delegate" destination="Gxh-mw-j71" id="XLn-IA-vNU"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="TXj-2z-RxU"/>
                     <connections>
                         <outlet property="enableWSSwitch" destination="jA5-8Y-Zx2" id="OCH-xa-Bsy"/>
                         <outlet property="notificationServiceSwtich" destination="7zW-HB-4mj" id="BOc-Is-9gH"/>
@@ -820,8 +821,8 @@
         <image name="Settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dn3-gr-oCq"/>
-        <segue reference="GLs-rW-XgV"/>
         <segue reference="o3u-Zt-e2B"/>
+        <segue reference="GLs-rW-XgV"/>
+        <segue reference="dn3-gr-oCq"/>
     </inferredMetricsTieBreakers>
 </document>
