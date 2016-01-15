@@ -759,8 +759,8 @@
         <image name="Settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cmr-lk-VRP"/>
         <segue reference="7bj-8R-fnE"/>
-        <segue reference="GLs-rW-XgV"/>
+        <segue reference="Zbj-2f-bAP"/>
+        <segue reference="Cmr-lk-VRP"/>
     </inferredMetricsTieBreakers>
 </document>
