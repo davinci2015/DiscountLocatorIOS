@@ -58,20 +58,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             print(view.annotation!.subtitle) // annotation's subttitle
             self.senderView = view
             
-            performSegueWithIdentifier("onBasharSegue", sender: nil)
+            performSegueWithIdentifier("onShowDiscountSegue", sender: nil)
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if segue.identifier == "onBasharSegue"
+        if segue.identifier == "onShowDiscountSegue"
         {
             if let destination = segue.destinationViewController as? DiscountsViewController
             {
                 
-                /*
-                * Tako mi ALLAHA ovo moze drukcije!! ovo nije pravi put
-                */
                 var clickedStore: Store?
                 for store in stores!
                 {
