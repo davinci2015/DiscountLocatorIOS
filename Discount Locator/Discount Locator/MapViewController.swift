@@ -2,9 +2,11 @@ import UIKit
 import MapKit
 import db
 import CoreLocation
+import iAd
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    @IBOutlet weak var bannerView: ADBannerView!
     @IBOutlet weak var mapView: MKMapView!
     
     var stores: [Store]?
@@ -42,6 +44,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         centerMapOnLocation(currentLocation)
         generateAnnotations()
         
+        bannerView.delegate = self
+        bannerView.hidden = true
+        
     }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { //centrira regiju ovisno o tvojoj poziciji, još ne treba
 //        let location = locations.last! as CLLocation
@@ -58,20 +63,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             print(view.annotation!.subtitle) // annotation's subttitle
             self.senderView = view
             
-            performSegueWithIdentifier("onBasharSegue", sender: nil)
+            performSegueWithIdentifier("onShowDiscountSegue", sender: nil)
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if segue.identifier == "onBasharSegue"
+        if segue.identifier == "onShowDiscountSegue"
         {
             if let destination = segue.destinationViewController as? DiscountsViewController
             {
                 
-                /*
-                * Tako mi ALLAHA ovo moze drukcije!! ovo nije pravi put
-                */
                 var clickedStore: Store?
                 for store in stores!
                 {
@@ -130,5 +132,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension MapViewController: ADBannerViewDelegate
+{
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        bannerView.hidden = false
+    }
+    
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        bannerView.hidden = true
     }
 }
