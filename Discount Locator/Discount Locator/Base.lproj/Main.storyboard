@@ -119,20 +119,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pjJ-GA-PJj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2X7-Ih-xXD">
+                                <rect key="frame" x="0.0" y="5" width="600" height="595"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pjJ-GA-PJj">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="547"/>
+                                    </mapView>
+                                    <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5s-oH-oZl">
+                                        <rect key="frame" x="0.0" y="547" width="600" height="48"/>
+                                    </adBannerView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pjJ-GA-PJj" firstAttribute="leading" secondItem="n5Z-Kc-2fs" secondAttribute="leading" id="0NX-5N-bUd"/>
-                            <constraint firstItem="pjJ-GA-PJj" firstAttribute="top" secondItem="n5Z-Kc-2fs" secondAttribute="top" id="8jE-1Q-4eu"/>
-                            <constraint firstAttribute="trailing" secondItem="pjJ-GA-PJj" secondAttribute="trailing" id="GIB-tE-Ns0"/>
-                            <constraint firstItem="qUg-sz-isR" firstAttribute="top" secondItem="pjJ-GA-PJj" secondAttribute="bottom" constant="49" id="l2p-ei-9B3"/>
+                            <constraint firstItem="2X7-Ih-xXD" firstAttribute="leading" secondItem="n5Z-Kc-2fs" secondAttribute="leadingMargin" constant="-20" id="INA-It-FC6"/>
+                            <constraint firstItem="2X7-Ih-xXD" firstAttribute="top" secondItem="QNA-Oz-82E" secondAttribute="bottom" constant="-15" id="q9J-fh-uKq"/>
+                            <constraint firstItem="qUg-sz-isR" firstAttribute="top" secondItem="2X7-Ih-xXD" secondAttribute="bottom" id="rhP-Ko-yQS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2X7-Ih-xXD" secondAttribute="trailing" constant="-20" id="y79-iV-lcQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ecc-mJ-YJC"/>
                     <connections>
+                        <outlet property="bannerView" destination="u5s-oH-oZl" id="8gL-j7-iBD"/>
                         <outlet property="mapView" destination="pjJ-GA-PJj" id="bu8-mu-Wck"/>
                         <segue destination="VxX-Bz-t46" kind="show" identifier="onShowDiscountSegue" id="Cmr-lk-VRP"/>
                     </connections>

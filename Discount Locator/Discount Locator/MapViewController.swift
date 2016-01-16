@@ -2,9 +2,11 @@ import UIKit
 import MapKit
 import db
 import CoreLocation
+import iAd
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    @IBOutlet weak var bannerView: ADBannerView!
     @IBOutlet weak var mapView: MKMapView!
     
     var stores: [Store]?
@@ -41,6 +43,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         currentLocation = CLLocation(latitude: 46.310409, longitude: 16.343013) //ZA PROBU
         centerMapOnLocation(currentLocation)
         generateAnnotations()
+        
+        bannerView.delegate = self
+        bannerView.hidden = true
         
     }
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { //centrira regiju ovisno o tvojoj poziciji, još ne treba
@@ -127,5 +132,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
             regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension MapViewController: ADBannerViewDelegate
+{
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        bannerView.hidden = false
+    }
+    
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        bannerView.hidden = true
     }
 }
