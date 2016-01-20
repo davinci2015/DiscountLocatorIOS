@@ -36,7 +36,6 @@
 		524BF9C91C2377C600AFAA27 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */; };
 		524BF9CB1C2379CD00AFAA27 /* VcNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CA1C2379CD00AFAA27 /* VcNav.swift */; };
 		524BF9CD1C237DB800AFAA27 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */; };
-		525C480C1C4FF8CA0099F7DF /* WebServiceResultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C480B1C4FF8CA0099F7DF /* WebServiceResultDelegate.swift */; };
 		5282F21B1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */; };
 		52B995911C18C532000B34DA /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B995901C18C532000B34DA /* NetConnection.swift */; };
 		52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9751C18C17C005C3E95 /* MapViewController.swift */; };
@@ -124,7 +123,6 @@
 		524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		524BF9CA1C2379CD00AFAA27 /* VcNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VcNav.swift; sourceTree = "<group>"; };
 		524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
-		525C480B1C4FF8CA0099F7DF /* WebServiceResultDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceResultDelegate.swift; sourceTree = "<group>"; };
 		5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDiscountsTabeViewController.swift; sourceTree = "<group>"; };
 		52B995901C18C532000B34DA /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
 		52DCF9751C18C17C005C3E95 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 				52E0A8F71BF286F4008A8A4F /* Info.plist */,
 				52E0A8FF1BF289A7008A8A4F /* HTTPRequest.swift */,
 				52B995901C18C532000B34DA /* NetConnection.swift */,
-				525C480B1C4FF8CA0099F7DF /* WebServiceResultDelegate.swift */,
 			);
 			path = ws;
 			sourceTree = "<group>";
@@ -601,7 +598,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E0A9001BF289A7008A8A4F /* HTTPRequest.swift in Sources */,
-				525C480C1C4FF8CA0099F7DF /* WebServiceResultDelegate.swift in Sources */,
 				52B995911C18C532000B34DA /* NetConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

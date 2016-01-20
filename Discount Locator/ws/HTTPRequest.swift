@@ -7,6 +7,10 @@
 //
 import Alamofire
 
+public protocol WebServiceResultDelegate{
+    func getResult(json:AnyObject)
+}
+
 public class HTTPRequest
 {
     
