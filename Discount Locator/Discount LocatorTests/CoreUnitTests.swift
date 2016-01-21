@@ -25,13 +25,11 @@ class CoreUnitTests: XCTestCase {
     
 
     func testParsing(){
-        let a = JSON("{items:ducan}")
-        print(a["items"])
-        
-        let stores = JsonAdapter.getStores("{items = \"[{\"id\":\"1\",\"name\":\"Super Nova\",\"description\":\"Veliko blagdansko sni\\u017eenje u odabranim du\\u0107anima u centru Super Nova.\",\"imgUrl\":\"http:\\/\\/cortex.foi.hr\\/mtl\\/courses\\/air\\/img\\/slika1.png\",\"longitude\":\"16307138\",\"latitude\":\"46319970\"},{\"id\":\"2\",\"name\":\"Varteks\",\"description\":\"Popust na sve kolekcije ljetne odje\\u0107e u Varteks Outlet du\\u0107anu.\",\"imgUrl\":\"http:\\/\\/cortex.foi.hr\\/mtl\\/courses\\/air\\/img\\/slika2.png\",\"longitude\":\"16343460\",\"latitude\":\"46292420\"}]\"}")
-       print("broj 'canadu':",stores.count)
+
+        let jsonStores: [String: AnyObject] = [
+            "items": "[{\"id\": \"1\",\"name\": \"1\",\"description\": \"1\",\"imgUrl\": \"1\",\"longitude\": \"1\",\"latitude\": \"1\"},{\"id\": \"1\",\"name\": \"1\",\"description\": \"1\",\"imgUrl\": \"1\",\"longitude\": \"1\",\"latitude\": \"1\"}]",
+        ]
+        let stores = JsonAdapter.getStores(jsonStores)
         XCTAssertTrue(stores.count==2, "nije vratio 2 dućana")
-        
-        
     }
 }
