@@ -14,6 +14,7 @@ public class JsonAdapter
 {
     public static func getStores(json: AnyObject) -> Array<Store>
     {
+        print(json)
         var stores = [Store]()
         let jsonStores = JSON(json)
         
