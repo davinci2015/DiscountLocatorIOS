@@ -32,4 +32,22 @@ class CoreUnitTests: XCTestCase {
         let stores = JsonAdapter.getStores(jsonStores)
         XCTAssertTrue(stores.count==2, "nije vratio 2 dućana")
     }
+    
+    func testJsonAdapterStores(){
+        let resultEmptyString = JsonAdapter.getStores("")
+        let wrongObject: [String: AnyObject] = [
+            "test": "1",
+        ]
+        let resultWrongObject = JsonAdapter.getStores(wrongObject)
+        let normalObject: [String: AnyObject] = [
+            "items": "[{\"id\": \"1\",\"name\": \"Super nova\",\"description\": \"Veliko blagdansko snizenje\",\"imgUrl\": \"cortex.foi.hr/slika2.png\",\"longitude\": \"16\",\"latitude\": \"46\"}]",
+        ]
+        let resultNormal = JsonAdapter.getStores(normalObject)
+        
+        XCTAssertEqual(resultEmptyString.count, 0, "treba biti nula")
+        XCTAssertEqual(resultWrongObject.count, 0, "treba biti nula")
+        
+        XCTAssertEqual(resultNormal[0].name, "Super nova", "naziv ducana nije tocan")
+        
+    }
 }

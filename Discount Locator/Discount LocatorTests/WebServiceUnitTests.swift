@@ -24,6 +24,7 @@ class WebServiceUnitTests: XCTestCase {
         XCTAssertNotNil(HTTPRequest(), "http request objekt je nil")
         XCTAssertNil(HTTPRequest().delegate, "delegat nije nil") //delegat bi trebao prilikom kreacije biti nil
     }
+    
     func testInternetConnection(){
         XCTAssertTrue(NetConnection.Connection.isConnectedToNetwork(),"Uređaj nije spojen na internet")
     }
