@@ -17,7 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var storeRadiusInMeters: Double = Double(NSUserDefaults().integerForKey("StoreRadius"))
     let locationManager = CLLocationManager()
     var currentLocation = CLLocation()
-    var currCircle = MKCircle() 
+    var currCircle = MKCircle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let stores = DbController.sharedDBInstance.realm.objects(Store)
         self.stores = stores.reverse()
         
-        //get users location 
+        //get users location
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
         
@@ -52,8 +52,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         addRadiusCircle(currentLocation)
         
     }
-
+    
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
         if control == view.rightCalloutAccessoryView{
             print(view.annotation!.title) // annotation's title
             print(view.annotation!.subtitle) // annotation's subttitle
@@ -64,11 +65,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-            let circle = MKCircleRenderer(overlay: overlay)
-            circle.strokeColor = UIColor.blueColor()
-            circle.fillColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
-            circle.lineWidth = 1
-            return circle
+        let circle = MKCircleRenderer(overlay: overlay)
+        circle.strokeColor = UIColor.blueColor()
+        circle.fillColor = UIColor(red: 0, green: 255, blue: 0, alpha: 0.2)
+        circle.lineWidth = 1
+        return circle
     }
     
     func addRadiusCircle(location: CLLocation){
@@ -97,9 +98,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-
+    
     func generateAnnotations(){
-      
+        
         var annArray: [MKAnnotation] = []
         print("current radius is:", storeRadiusInMeters)
         for store in stores! {
@@ -118,11 +119,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         mapView.addAnnotations(annArray)
         
-    
+        
     }
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
-        
+        if annotation.isKindOfClass(mapView.userLocation.classForCoder)
+        {
+            return nil
+        }
         let reuseId = "pin"
         
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
