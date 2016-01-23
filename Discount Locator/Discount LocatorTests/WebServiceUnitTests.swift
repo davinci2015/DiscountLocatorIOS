@@ -31,7 +31,7 @@ class WebServiceUnitTests: XCTestCase {
         httpRequest.delegate = self
         httpRequest.httprequest("http://cortex.foi.hr/mtl/courses/air/stores.php", params: ["method":"getAll"])
 
-        waitForExpectationsWithTimeout(10, handler: nil)
+        waitForExpectationsWithTimeout(4, handler: nil)
     }
     
     func testInternetConnection(){
