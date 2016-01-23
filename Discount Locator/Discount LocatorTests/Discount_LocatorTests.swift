@@ -4,7 +4,6 @@
 //
 //  Created by Faculty of Organisation and Informatics on 21/01/16.
 //  Copyright © 2016 air. All rights reserved.
-//
 
 import XCTest
 
@@ -20,7 +19,6 @@ class Discount_LocatorTests: XCTestCase {
         super.tearDown()
     }
     
-   
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
