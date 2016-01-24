@@ -101,6 +101,7 @@ extension WebServiceDataLoader: WebServiceResultDelegate{
             self.discountsLoaded = true
             self.showLoadedData()
         }
+        
     }
 
 }
