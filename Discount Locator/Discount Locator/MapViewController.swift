@@ -3,7 +3,7 @@ import MapKit
 import db
 import CoreLocation
 import iAd
-
+import map
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     

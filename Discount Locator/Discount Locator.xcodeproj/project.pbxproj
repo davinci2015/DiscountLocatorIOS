@@ -41,6 +41,7 @@
 		524BF9CB1C2379CD00AFAA27 /* VcNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CA1C2379CD00AFAA27 /* VcNav.swift */; };
 		524BF9CD1C237DB800AFAA27 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */; };
 		5282F21B1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */; };
+		528B3C3A1C57F227004F67F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528B3C381C57F227004F67F2 /* Main.storyboard */; };
 		52B995911C18C532000B34DA /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B995901C18C532000B34DA /* NetConnection.swift */; };
 		52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9751C18C17C005C3E95 /* MapViewController.swift */; };
 		52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9771C18CB6A005C3E95 /* Artwork.swift */; };
@@ -55,9 +56,10 @@
 		52FAB47F1C57C9E30007CB0B /* Navigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAB4771C57C9E30007CB0B /* Navigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52FAB4841C57CE290007CB0B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAB4831C57CE290007CB0B /* UserDefaults.swift */; };
 		52FAB4861C57D2C40007CB0B /* MapConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FAB4851C57D2C40007CB0B /* MapConfig.swift */; };
-		52FAB4A01C57E3330007CB0B /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FAB49F1C57E3330007CB0B /* map.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52FAB4A41C57E3330007CB0B /* map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAB49D1C57E3330007CB0B /* map.framework */; };
-		52FAB4A51C57E3330007CB0B /* map.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAB49D1C57E3330007CB0B /* map.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52FAB4B11C57ED270007CB0B /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FAB4B01C57ED270007CB0B /* map.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52FAB4B51C57ED270007CB0B /* map.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAB4AE1C57ED260007CB0B /* map.framework */; };
+		52FAB4B61C57ED270007CB0B /* map.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52FAB4AE1C57ED260007CB0B /* map.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52FAB4BA1C57EF070007CB0B /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = 52FAB4B01C57ED270007CB0B /* map.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD2D6ACBF2EE9CF38F0C2DBA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B49BC96E103AED423A25955 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,11 +106,11 @@
 			remoteGlobalIDString = 52FAB4761C57C9E30007CB0B;
 			remoteInfo = Navigation;
 		};
-		52FAB4A21C57E3330007CB0B /* PBXContainerItemProxy */ = {
+		52FAB4B31C57ED270007CB0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 520F19B51BF2818700A25520 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 52FAB49C1C57E3330007CB0B;
+			remoteGlobalIDString = 52FAB4AD1C57ED260007CB0B;
 			remoteInfo = map;
 		};
 /* End PBXContainerItemProxy section */
@@ -124,7 +126,7 @@
 				52E0A8FB1BF286F4008A8A4F /* ws.framework in Embed Frameworks */,
 				520F1A1F1BF285C600A25520 /* db.framework in Embed Frameworks */,
 				52429C8E1BF631FA00069D37 /* core.framework in Embed Frameworks */,
-				52FAB4A51C57E3330007CB0B /* map.framework in Embed Frameworks */,
+				52FAB4B61C57ED270007CB0B /* map.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,9 +176,10 @@
 		524BF9CA1C2379CD00AFAA27 /* VcNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VcNav.swift; path = "../Discount Locator/VcNav.swift"; sourceTree = "<group>"; };
 		524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackTableVC.swift; path = "../Discount Locator/BackTableVC.swift"; sourceTree = "<group>"; };
 		5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDiscountsTabeViewController.swift; sourceTree = "<group>"; };
+		528B3C391C57F227004F67F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B995901C18C532000B34DA /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
 		52DCF9751C18C17C005C3E95 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artwork.swift; path = "Discount Locator/Artwork.swift"; sourceTree = "<group>"; };
+		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artwork.swift; path = "../Discount Locator/Artwork.swift"; sourceTree = "<group>"; };
 		52E0A8F31BF286F4008A8A4F /* ws.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ws.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E0A8F51BF286F4008A8A4F /* ws.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ws.h; sourceTree = "<group>"; };
 		52E0A8F71BF286F4008A8A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,10 +190,10 @@
 		52FAB4791C57C9E30007CB0B /* Navigation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Navigation.h; sourceTree = "<group>"; };
 		52FAB47B1C57C9E30007CB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FAB4831C57CE290007CB0B /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaults.swift; path = core/UserDefaults.swift; sourceTree = "<group>"; };
-		52FAB4851C57D2C40007CB0B /* MapConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapConfig.swift; sourceTree = "<group>"; };
-		52FAB49D1C57E3330007CB0B /* map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52FAB49F1C57E3330007CB0B /* map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
-		52FAB4A11C57E3330007CB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FAB4851C57D2C40007CB0B /* MapConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapConfig.swift; path = ../MapConfig.swift; sourceTree = "<group>"; };
+		52FAB4AE1C57ED260007CB0B /* map.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = map.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FAB4B01C57ED270007CB0B /* map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
+		52FAB4B21C57ED270007CB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B49BC96E103AED423A25955 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804F51C96AAC8963F034DD40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D85B9AC2342FC4FB7F909B08 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FAB47E1C57C9E30007CB0B /* Navigation.framework in Frameworks */,
-				52FAB4A41C57E3330007CB0B /* map.framework in Frameworks */,
+				52FAB4B51C57ED270007CB0B /* map.framework in Frameworks */,
 				520F1A1E1BF285C600A25520 /* db.framework in Frameworks */,
 				AD2D6ACBF2EE9CF38F0C2DBA /* Pods.framework in Frameworks */,
 				52E0A8FA1BF286F4008A8A4F /* ws.framework in Frameworks */,
@@ -252,7 +255,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FAB4991C57E3330007CB0B /* Frameworks */ = {
+		52FAB4AA1C57ED260007CB0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,7 +274,7 @@
 				52429C871BF631FA00069D37 /* core */,
 				523FBF381C5135AF004CC914 /* Discount LocatorTests */,
 				523FBF4A1C539C80004CC914 /* Discount LocatorUITests */,
-				52FAB49E1C57E3330007CB0B /* map */,
+				52FAB4AF1C57ED270007CB0B /* map */,
 				520F19BE1BF2818700A25520 /* Products */,
 				F41F7F2C0B6DD2AD80B365FD /* Pods */,
 				8EA5D5666345783A2213EF3C /* Frameworks */,
@@ -288,7 +291,7 @@
 				523FBF371C5135AF004CC914 /* Discount LocatorTests.xctest */,
 				523FBF491C539C80004CC914 /* Discount LocatorUITests.xctest */,
 				52FAB4771C57C9E30007CB0B /* Navigation.framework */,
-				52FAB49D1C57E3330007CB0B /* map.framework */,
+				52FAB4AE1C57ED260007CB0B /* map.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,11 +300,12 @@
 			isa = PBXGroup;
 			children = (
 				52FAB4781C57C9E30007CB0B /* Navigation */,
-				520F19C01BF2818700A25520 /* AppDelegate.swift */,
 				5294B0EF1C31B8FF005619D2 /* Helpers */,
 				5294B0EE1C31B4DC005619D2 /* Views */,
 				5294B0ED1C31B43C005619D2 /* ViewControllers */,
+				520F19C01BF2818700A25520 /* AppDelegate.swift */,
 				520F19C71BF2818700A25520 /* Assets.xcassets */,
+				528B3C381C57F227004F67F2 /* Main.storyboard */,
 				520F19CC1BF2818700A25520 /* Info.plist */,
 			);
 			path = "Discount Locator";
@@ -383,8 +387,6 @@
 			isa = PBXGroup;
 			children = (
 				52429C971BF687F500069D37 /* WebServiceDataLoader.swift */,
-				52FAB4851C57D2C40007CB0B /* MapConfig.swift */,
-				52DCF9771C18CB6A005C3E95 /* Artwork.swift */,
 				521446A41C2726250096D238 /* Settings.swift */,
 				52FAB4831C57CE290007CB0B /* UserDefaults.swift */,
 			);
@@ -418,11 +420,13 @@
 			path = ../Navigation;
 			sourceTree = "<group>";
 		};
-		52FAB49E1C57E3330007CB0B /* map */ = {
+		52FAB4AF1C57ED270007CB0B /* map */ = {
 			isa = PBXGroup;
 			children = (
-				52FAB49F1C57E3330007CB0B /* map.h */,
-				52FAB4A11C57E3330007CB0B /* Info.plist */,
+				52FAB4851C57D2C40007CB0B /* MapConfig.swift */,
+				52DCF9771C18CB6A005C3E95 /* Artwork.swift */,
+				52FAB4B01C57ED270007CB0B /* map.h */,
+				52FAB4B21C57ED270007CB0B /* Info.plist */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -476,14 +480,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FAB47A1C57C9E30007CB0B /* Navigation.h in Headers */,
-				52FAB4A01C57E3330007CB0B /* map.h in Headers */,
+				52FAB4B11C57ED270007CB0B /* map.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FAB49A1C57E3330007CB0B /* Headers */ = {
+		52FAB4AB1C57ED260007CB0B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FAB4BA1C57EF070007CB0B /* map.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +514,7 @@
 				52E0A8F91BF286F4008A8A4F /* PBXTargetDependency */,
 				52429C8C1BF631FA00069D37 /* PBXTargetDependency */,
 				52FAB47D1C57C9E30007CB0B /* PBXTargetDependency */,
-				52FAB4A31C57E3330007CB0B /* PBXTargetDependency */,
+				52FAB4B41C57ED270007CB0B /* PBXTargetDependency */,
 			);
 			name = "Discount Locator";
 			productName = "Discount Locator";
@@ -624,14 +629,14 @@
 			productReference = 52FAB4771C57C9E30007CB0B /* Navigation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		52FAB49C1C57E3330007CB0B /* map */ = {
+		52FAB4AD1C57ED260007CB0B /* map */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52FAB4A61C57E3330007CB0B /* Build configuration list for PBXNativeTarget "map" */;
+			buildConfigurationList = 52FAB4B71C57ED270007CB0B /* Build configuration list for PBXNativeTarget "map" */;
 			buildPhases = (
-				52FAB4981C57E3330007CB0B /* Sources */,
-				52FAB4991C57E3330007CB0B /* Frameworks */,
-				52FAB49A1C57E3330007CB0B /* Headers */,
-				52FAB49B1C57E3330007CB0B /* Resources */,
+				52FAB4A91C57ED260007CB0B /* Sources */,
+				52FAB4AA1C57ED260007CB0B /* Frameworks */,
+				52FAB4AB1C57ED260007CB0B /* Headers */,
+				52FAB4AC1C57ED260007CB0B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -639,7 +644,7 @@
 			);
 			name = map;
 			productName = map;
-			productReference = 52FAB49D1C57E3330007CB0B /* map.framework */;
+			productReference = 52FAB4AE1C57ED260007CB0B /* map.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -682,7 +687,7 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = PCHFX9J3RC;
 					};
-					52FAB49C1C57E3330007CB0B = {
+					52FAB4AD1C57ED260007CB0B = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = PCHFX9J3RC;
 					};
@@ -705,10 +710,10 @@
 				520F1A161BF285C500A25520 /* db */,
 				52E0A8F21BF286F4008A8A4F /* ws */,
 				52429C851BF631FA00069D37 /* core */,
-				52FAB49C1C57E3330007CB0B /* map */,
+				52FAB4761C57C9E30007CB0B /* Navigation */,
+				52FAB4AD1C57ED260007CB0B /* map */,
 				523FBF361C5135AF004CC914 /* Discount LocatorTests */,
 				523FBF481C539C80004CC914 /* Discount LocatorUITests */,
-				52FAB4761C57C9E30007CB0B /* Navigation */,
 			);
 		};
 /* End PBXProject section */
@@ -721,6 +726,7 @@
 				520F19CB1BF2818700A25520 /* LaunchScreen.storyboard in Resources */,
 				520F19C81BF2818700A25520 /* Assets.xcassets in Resources */,
 				520F19C61BF2818700A25520 /* Main.storyboard in Resources */,
+				528B3C3A1C57F227004F67F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,7 +772,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FAB49B1C57E3330007CB0B /* Resources */ = {
+		52FAB4AC1C57ED260007CB0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -906,7 +912,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52FAB4981C57E3330007CB0B /* Sources */ = {
+		52FAB4A91C57ED260007CB0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -946,10 +952,10 @@
 			target = 52FAB4761C57C9E30007CB0B /* Navigation */;
 			targetProxy = 52FAB47C1C57C9E30007CB0B /* PBXContainerItemProxy */;
 		};
-		52FAB4A31C57E3330007CB0B /* PBXTargetDependency */ = {
+		52FAB4B41C57ED270007CB0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52FAB49C1C57E3330007CB0B /* map */;
-			targetProxy = 52FAB4A21C57E3330007CB0B /* PBXContainerItemProxy */;
+			target = 52FAB4AD1C57ED260007CB0B /* map */;
+			targetProxy = 52FAB4B31C57ED270007CB0B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -968,6 +974,14 @@
 				520F19CA1BF2818700A25520 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		528B3C381C57F227004F67F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528B3C391C57F227004F67F2 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1340,7 +1354,7 @@
 			};
 			name = Release;
 		};
-		52FAB4A71C57E3330007CB0B /* Debug */ = {
+		52FAB4B81C57ED270007CB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1363,7 +1377,7 @@
 			};
 			name = Debug;
 		};
-		52FAB4A81C57E3330007CB0B /* Release */ = {
+		52FAB4B91C57ED270007CB0B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1459,14 +1473,16 @@
 				52FAB4821C57C9E30007CB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		52FAB4A61C57E3330007CB0B /* Build configuration list for PBXNativeTarget "map" */ = {
+		52FAB4B71C57ED270007CB0B /* Build configuration list for PBXNativeTarget "map" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52FAB4A71C57E3330007CB0B /* Debug */,
-				52FAB4A81C57E3330007CB0B /* Release */,
+				52FAB4B81C57ED270007CB0B /* Debug */,
+				52FAB4B91C57ED270007CB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

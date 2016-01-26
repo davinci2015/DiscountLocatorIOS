@@ -28,14 +28,10 @@ public class WebServiceDataLoader:DataLoader
     public func LoadData() {
         
         if(NetConnection.Connection.isConnectedToNetwork() && prefs.boolForKey("EnableWebService")){
-            print("loadm sa web servisa")
-            
-            
             httpRequest.delegate = self
             httpRequest.httprequest("http://cortex.foi.hr/mtl/courses/air/stores.php", params: ["method": "getAll"])
         }
         else {
-            print("loadam lokalno")
             self.showDataFromLocalDB()
         }
     }
@@ -74,7 +70,6 @@ public class WebServiceDataLoader:DataLoader
 
         for store in stores
         {
-            print(DbController.sharedDBInstance)
             DbController.sharedDBInstance.realmAdd(store)
             for discount in discounts
             {

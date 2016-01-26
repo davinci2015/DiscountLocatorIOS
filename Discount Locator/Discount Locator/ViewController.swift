@@ -16,13 +16,13 @@ public class ViewController: UITableViewController {
         UserDefaults.checkIfUserDefaultsAreSet()
         
         //set default Realm DB configuration
-//        DbController.sharedDBInstance.setDbSchema()
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
             schemaVersion: 3,
             migrationBlock: { migration, oldSchemaVersion in })
         
         webServiceDataLoader.storesTableView = self.storesTableView
         webServiceDataLoader.LoadData()
+        
         //turn off animation because it's initial view controller
         self.animationCheck()
         
