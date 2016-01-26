@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import RealmSwift
 
 public class DbController
@@ -29,6 +28,13 @@ public class DbController
         let data = self.realm.objects(o)
         return data
     }
+    
+//    public func setDbSchema()
+//    {
+//        Realm.Configuration.defaultConfiguration = Realm.Configuration(
+//            schemaVersion: 3,
+//            migrationBlock: { migration, oldSchemaVersion in })
+//    }
 }
 
 
