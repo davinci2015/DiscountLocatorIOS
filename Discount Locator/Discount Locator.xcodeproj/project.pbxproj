@@ -37,12 +37,14 @@
 		52429C931BF6321200069D37 /* JsonAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52429C921BF6321200069D37 /* JsonAdapter.swift */; };
 		52429C981BF687F500069D37 /* WebServiceDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52429C971BF687F500069D37 /* WebServiceDataLoader.swift */; };
 		52429C9A1BF68EC200069D37 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52429C991BF68EC200069D37 /* DataLoader.swift */; };
+		524774021C5B87BF00D8E101 /* DBDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524774011C5B87BF00D8E101 /* DBDataLoader.swift */; };
 		524BF9C91C2377C600AFAA27 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */; };
 		524BF9CB1C2379CD00AFAA27 /* VcNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CA1C2379CD00AFAA27 /* VcNav.swift */; };
 		524BF9CD1C237DB800AFAA27 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524BF9CC1C237DB800AFAA27 /* BackTableVC.swift */; };
 		5282F21B1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */; };
 		528B3C3A1C57F227004F67F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528B3C381C57F227004F67F2 /* Main.storyboard */; };
 		52B995911C18C532000B34DA /* NetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B995901C18C532000B34DA /* NetConnection.swift */; };
+		52D3BCC71C5B9D3700936547 /* SearchDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3BCC61C5B9D3700936547 /* SearchDataLoader.swift */; };
 		52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9751C18C17C005C3E95 /* MapViewController.swift */; };
 		52DCF9781C18CB6A005C3E95 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCF9771C18CB6A005C3E95 /* Artwork.swift */; };
 		52E0A8F61BF286F4008A8A4F /* ws.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E0A8F51BF286F4008A8A4F /* ws.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -170,6 +172,7 @@
 		52429C921BF6321200069D37 /* JsonAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonAdapter.swift; sourceTree = "<group>"; };
 		52429C971BF687F500069D37 /* WebServiceDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceDataLoader.swift; path = "Discount Locator/WebServiceDataLoader.swift"; sourceTree = "<group>"; };
 		52429C991BF68EC200069D37 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		524774011C5B87BF00D8E101 /* DBDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDataLoader.swift; sourceTree = "<group>"; };
 		524BF9C61C2377C500AFAA27 /* Discount Locator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Discount Locator-Bridging-Header.h"; path = "../Discount Locator/Discount Locator-Bridging-Header.h"; sourceTree = "<group>"; };
 		524BF9C71C2377C600AFAA27 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../Discount Locator/SWRevealViewController.h"; sourceTree = "<group>"; };
 		524BF9C81C2377C600AFAA27 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../Discount Locator/SWRevealViewController.m"; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		5282F21A1C280BAE00B04DCB /* SearchDiscountsTabeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDiscountsTabeViewController.swift; sourceTree = "<group>"; };
 		528B3C391C57F227004F67F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B995901C18C532000B34DA /* NetConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConnection.swift; sourceTree = "<group>"; };
+		52D3BCC61C5B9D3700936547 /* SearchDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDataLoader.swift; sourceTree = "<group>"; };
 		52DCF9751C18C17C005C3E95 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		52DCF9771C18CB6A005C3E95 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artwork.swift; path = "../Discount Locator/Artwork.swift"; sourceTree = "<group>"; };
 		52E0A8F31BF286F4008A8A4F /* ws.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ws.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -387,8 +391,10 @@
 			isa = PBXGroup;
 			children = (
 				52429C971BF687F500069D37 /* WebServiceDataLoader.swift */,
-				521446A41C2726250096D238 /* Settings.swift */,
 				52FAB4831C57CE290007CB0B /* UserDefaults.swift */,
+				52D3BCC61C5B9D3700936547 /* SearchDataLoader.swift */,
+				524774011C5B87BF00D8E101 /* DBDataLoader.swift */,
+				521446A41C2726250096D238 /* Settings.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -836,6 +842,7 @@
 			files = (
 				524BF9CB1C2379CD00AFAA27 /* VcNav.swift in Sources */,
 				520F19C31BF2818700A25520 /* ViewController.swift in Sources */,
+				52D3BCC71C5B9D3700936547 /* SearchDataLoader.swift in Sources */,
 				52E79CB81C2C853B0063157C /* ModalRadiusPickerViewController.swift in Sources */,
 				521446A51C2726250096D238 /* Settings.swift in Sources */,
 				52DCF9761C18C17C005C3E95 /* MapViewController.swift in Sources */,
@@ -850,6 +857,7 @@
 				52429C981BF687F500069D37 /* WebServiceDataLoader.swift in Sources */,
 				52E79CB61C2C7AF30063157C /* ApplicationSettingsTableViewController.swift in Sources */,
 				522DEE6C1C0A0CA8000B9191 /* StoreTableViewCell.swift in Sources */,
+				524774021C5B87BF00D8E101 /* DBDataLoader.swift in Sources */,
 				52FAB4861C57D2C40007CB0B /* MapConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

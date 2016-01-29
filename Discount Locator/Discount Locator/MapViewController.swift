@@ -4,6 +4,8 @@ import db
 import CoreLocation
 import iAd
 import map
+import ws
+import core
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
@@ -21,15 +23,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     var currCircle = MKCircle()
     var map = MapConfig()
     
+    var webServiceDataLoader = WebServiceDataLoader()
+    var dbDataLoader = DBDataLoader()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView.delegate = self
         
         mapView.mapType = MKMapType.Hybrid
-        
-        let stores = DbController.sharedDBInstance.realm.objects(Store)
-        self.stores = stores.reverse()
         
         // get users location
         // Ask for Authorisation from the User.
@@ -48,13 +49,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         map.delegate = self
         map.centerMapOnLocation(currentLocation)
-        map.generateAnnotations(self.stores!, currentLocation: currentLocation)
+        
         map.addRadiusCircle(currentLocation)
         
         bannerView.delegate = self
         bannerView.hidden = true
         
-        
+        if(NetConnection.Connection.isConnectedToNetwork() && NSUserDefaults.standardUserDefaults().boolForKey("EnableWebService")){
+            webServiceDataLoader.onDataLoadedDelegate = self
+            webServiceDataLoader.LoadData()
+        }else{
+            dbDataLoader.onDataLoadedDelegate = self
+            dbDataLoader.LoadData()
+        }
     }
     
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -166,5 +173,12 @@ extension MapViewController: Map
     
     func centerMap(coordReg: MKCoordinateRegion) {
         mapView.setRegion(coordReg, animated: true)
+    }
+}
+
+extension MapViewController:OnDataLoadedDelegate{
+    func onDataLoaded(stores: [Store], discounts: [Discount]) {
+        self.stores = stores
+        map.generateAnnotations(stores, currentLocation: currentLocation)
     }
 }

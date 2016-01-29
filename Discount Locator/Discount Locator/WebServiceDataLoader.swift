@@ -13,11 +13,6 @@ import ws
 
 public class WebServiceDataLoader:DataLoader
 {
-    public var stores: [Store] = []
-    public var discounts: [Discount] = []
-    public var storesTableView: UITableView?
-    
-
     private var discountsLoaded: Bool = false
     private var storesLoaded: Bool = false
     
@@ -27,13 +22,8 @@ public class WebServiceDataLoader:DataLoader
     
     public func LoadData() {
         
-        if(NetConnection.Connection.isConnectedToNetwork() && prefs.boolForKey("EnableWebService")){
-            httpRequest.delegate = self
-            httpRequest.httprequest("http://cortex.foi.hr/mtl/courses/air/stores.php", params: ["method": "getAll"])
-        }
-        else {
-            self.showDataFromLocalDB()
-        }
+        httpRequest.wsResultDelegate = self
+        httpRequest.httprequest("http://cortex.foi.hr/mtl/courses/air/stores.php", params: ["method": "getAll"])
     }
     
     
@@ -42,25 +32,12 @@ public class WebServiceDataLoader:DataLoader
 
         if(self.storesLoaded && self.discountsLoaded){
             self.bindData()
-            storesTableView?.reloadData()
+            self.dataLoaded()//from DataLoader class
         }
        
         
     }
     
-    private func showDataFromLocalDB()
-    {
-        let stores = DbController.sharedDBInstance.realmFetch(Store)
-        let discounts = DbController.sharedDBInstance.realmFetch(Discount)
-        
-        for store in stores{
-            self.stores.append(store as! Store)
-        }
-        for discount in discounts{
-            self.discounts.append(discount as! Discount)
-        }
-        storesTableView?.reloadData()
-    }
 
     private func bindData()
     {
@@ -68,10 +45,10 @@ public class WebServiceDataLoader:DataLoader
         DbController.sharedDBInstance.realm.deleteAll()
         try! DbController.sharedDBInstance.realm.commitWrite()
 
-        for store in stores
+        for store in stores!
         {
             DbController.sharedDBInstance.realmAdd(store)
-            for discount in discounts
+            for discount in discounts!
             {
                 if(discount.storeId == store.remoteId)
                 {
