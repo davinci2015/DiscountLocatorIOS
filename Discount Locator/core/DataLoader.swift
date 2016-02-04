@@ -17,7 +17,7 @@ public class DataLoader
     public var discounts:[Discount]?
     public var onDataLoadedDelegate:OnDataLoadedDelegate?
     
-    func LoadData() {}
+    public func LoadData() {}
     public init(){}
     public func dataLoaded() -> Bool {
         if (stores==nil || discounts == nil) {

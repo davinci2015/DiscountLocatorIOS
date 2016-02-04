@@ -20,8 +20,7 @@ public class WebServiceDataLoader:DataLoader
 
     var httpRequest = HTTPRequest()
     
-    public func LoadData() {
-        
+    public override func LoadData() {
         httpRequest.wsResultDelegate = self
         httpRequest.httprequest("http://cortex.foi.hr/mtl/courses/air/stores.php", params: ["method": "getAll"])
     }
@@ -29,13 +28,10 @@ public class WebServiceDataLoader:DataLoader
     
     private func showLoadedData()
     {
-
         if(self.storesLoaded && self.discountsLoaded){
             self.bindData()
             self.dataLoaded()//from DataLoader class
         }
-       
-        
     }
     
 
@@ -75,5 +71,4 @@ extension WebServiceDataLoader: WebServiceResultDelegate{
         }
         
     }
-
 }

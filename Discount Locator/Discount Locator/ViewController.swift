@@ -11,11 +11,12 @@ public class ViewController: UITableViewController {
     var stores = [Store] ()
     var discounts = [Discount] ()
     
-    var webServiceDataLoader = WebServiceDataLoader()
-    var dbDataLoader = DBDataLoader()
+   
+    var dataLoader:DataLoader?
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+       // dataLoader.LoadData()
         //set User Defaults
         UserDefaults.checkIfUserDefaultsAreSet()
         
@@ -25,13 +26,14 @@ public class ViewController: UITableViewController {
             migrationBlock: { migration, oldSchemaVersion in })
         
         if(NetConnection.Connection.isConnectedToNetwork() && NSUserDefaults.standardUserDefaults().boolForKey("EnableWebService")){
-            webServiceDataLoader.onDataLoadedDelegate = self
-            webServiceDataLoader.LoadData()
+            dataLoader = WebServiceDataLoader()
+           
         }else{
+             dataLoader = DBDataLoader()
             
-            dbDataLoader.onDataLoadedDelegate = self
-            dbDataLoader.LoadData()
         }
+        dataLoader!.onDataLoadedDelegate = self
+        dataLoader!.LoadData()
 
         
         //turn off animation because it's initial view controller
